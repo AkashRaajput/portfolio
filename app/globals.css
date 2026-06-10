@@ -1,0 +1,130 @@
+@import "tailwindcss";
+
+@source "../app/**/*.{ts,tsx}";
+@source "../components/**/*.{ts,tsx}";
+@source "../config/**/*.{ts,tsx}";
+@source "../data/**/*.{ts,tsx}";
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+}
+
+:root {
+  color-scheme: light;
+  --radius: 0.625rem;
+  --background: oklch(0.985 0.004 248);
+  --foreground: oklch(0.18 0.026 252);
+  --card: oklch(1 0 0 / 0.92);
+  --card-foreground: oklch(0.18 0.026 252);
+  --popover: oklch(1 0 0);
+  --popover-foreground: oklch(0.18 0.026 252);
+  --primary: oklch(0.44 0.12 252);
+  --primary-foreground: oklch(0.99 0.003 248);
+  --secondary: oklch(0.94 0.012 248);
+  --secondary-foreground: oklch(0.22 0.03 252);
+  --muted: oklch(0.94 0.011 248);
+  --muted-foreground: oklch(0.48 0.028 252);
+  --accent: oklch(0.58 0.14 176);
+  --accent-foreground: oklch(0.12 0.02 252);
+  --destructive: oklch(0.58 0.21 25);
+  --border: oklch(0.84 0.018 252);
+  --input: oklch(0.84 0.018 252);
+  --ring: oklch(0.44 0.12 252);
+}
+
+* {
+  border-color: var(--border);
+}
+
+html {
+  scroll-behavior: smooth;
+  background: var(--background);
+}
+
+body {
+  min-height: 100vh;
+  overflow-x: hidden;
+  background:
+    linear-gradient(180deg, oklch(1 0 0), var(--background) 32rem),
+    radial-gradient(circle at 86% 8%, oklch(0.72 0.08 252 / 0.16), transparent 24rem);
+  color: var(--foreground);
+  font-feature-settings: "rlig" 1, "calt" 1;
+}
+
+button,
+a,
+input,
+textarea {
+  outline-offset: 3px;
+}
+
+::selection {
+  background: oklch(0.79 0.16 172 / 0.28);
+}
+
+.skip-link {
+  position: fixed;
+  left: 1rem;
+  top: 1rem;
+  z-index: 100;
+  transform: translateY(-150%);
+  border-radius: 0.5rem;
+  background: var(--primary);
+  color: var(--primary-foreground);
+  padding: 0.75rem 1rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+  transition: transform 160ms ease;
+}
+
+.skip-link:focus {
+  transform: translateY(0);
+}
+
+.glass {
+  border: 1px solid var(--border);
+  background: var(--card);
+  box-shadow: 0 18px 50px oklch(0.28 0.04 252 / 0.08);
+}
+
+.text-balance {
+  text-wrap: balance;
+}
+
+.noise {
+  display: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
