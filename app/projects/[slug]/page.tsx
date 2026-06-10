@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { ArrowLeft, CheckCircle2, Layers3, Target, Wrench } from "lucide-react";
+import { ArrowLeft, CheckCircle2, ExternalLink, Layers3, Target, Wrench } from "lucide-react";
 
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
@@ -95,6 +95,19 @@ export default async function ProjectDetailPage({ params }: ProjectDetailPagePro
                 {project.title}
               </h1>
               <p className="mt-6 max-w-3xl text-lg leading-8 text-muted-foreground">{project.overview}</p>
+              <div className="mt-6 flex flex-wrap gap-3">
+                {project.period ? (
+                  <Badge className="bg-background/40 font-mono text-xs">{project.period}</Badge>
+                ) : null}
+                {project.liveUrl ? (
+                  <Button asChild variant="outline" size="sm">
+                    <Link href={project.liveUrl} target="_blank" rel="noreferrer">
+                      <ExternalLink />
+                      View live site
+                    </Link>
+                  </Button>
+                ) : null}
+              </div>
             </div>
             <Card className="bg-background/35">
               <CardContent className="p-5">

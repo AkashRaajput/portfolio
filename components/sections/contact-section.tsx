@@ -3,7 +3,7 @@
 import type { FormEvent } from "react";
 import Link from "next/link";
 import { useState } from "react";
-import { Github, Linkedin, Mail, MapPin, Send } from "lucide-react";
+import { Github, Linkedin, Mail, MapPin, Phone, Send } from "lucide-react";
 import { toast } from "sonner";
 
 import { FadeIn } from "@/components/motion/fade-in";
@@ -66,6 +66,7 @@ export function ContactSection({ standalone = false }: { standalone?: boolean })
               eyebrow="Contact"
               title="Have a role, product, or collaboration in mind?"
               description="Send a short note and I will reply with availability, context, and next steps."
+              as={standalone ? "h1" : "h2"}
             />
             <div className="mt-8 grid gap-4">
               <Link
@@ -74,6 +75,13 @@ export function ContactSection({ standalone = false }: { standalone?: boolean })
               >
                 <Mail className="size-4 text-primary" />
                 {siteConfig.email}
+              </Link>
+              <Link
+                href={`tel:${siteConfig.phone}`}
+                className="flex items-center gap-3 text-muted-foreground transition-colors hover:text-foreground"
+              >
+                <Phone className="size-4 text-primary" />
+                {siteConfig.phone}
               </Link>
               <p className="flex items-center gap-3 text-muted-foreground">
                 <MapPin className="size-4 text-primary" />

@@ -9,16 +9,27 @@ export function SchemaMarkup() {
     name: siteConfig.name,
     url: siteConfig.url,
     email: siteConfig.email,
-    jobTitle: siteConfig.role,
+    telephone: siteConfig.phone,
+    jobTitle: "HubSpot CMS Developer",
+    worksFor: {
+      "@type": "Organization",
+      name: "Palmspire Technology",
+    },
     address: {
       "@type": "PostalAddress",
-      addressCountry: siteConfig.location,
+      addressLocality: "Dehradun",
+      addressCountry: "India",
+    },
+    alumniOf: {
+      "@type": "CollegeOrUniversity",
+      name: "Dev Bhoomi Institute of Technology",
     },
     sameAs: [siteConfig.socials.github, siteConfig.socials.linkedin],
     knowsAbout: [
       "HubSpot CMS",
       "HubL",
       "HubDB",
+      "WordPress",
       "Python",
       "Flask",
       "TensorFlow",
@@ -26,6 +37,7 @@ export function SchemaMarkup() {
       "Next.js",
       "API Integrations",
       "CRM Integrations",
+      "Membership Systems",
     ],
   };
 
@@ -51,7 +63,7 @@ export function SchemaMarkup() {
     hasPart: projects.map((project) => ({
       "@type": "CreativeWork",
       name: project.title,
-      url: `${siteConfig.url}/projects/${project.slug}`,
+      url: project.liveUrl ?? `${siteConfig.url}/projects/${project.slug}`,
       description: project.overview,
       keywords: project.technologies.join(", "),
     })),

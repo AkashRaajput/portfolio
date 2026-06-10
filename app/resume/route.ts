@@ -1,5 +1,6 @@
 import { NextResponse } from "next/server";
 
+import { education } from "@/data/education";
 import { achievements } from "@/data/skills";
 import { experiences } from "@/data/experience";
 import { profile } from "@/data/profile";
@@ -8,28 +9,38 @@ import { siteConfig } from "@/config/site";
 
 export function GET() {
   const resume = [
-    `${siteConfig.name}`,
+    siteConfig.name,
     siteConfig.role,
     siteConfig.email,
+    siteConfig.phone,
     siteConfig.socials.github,
     siteConfig.socials.linkedin,
     "",
     "SUMMARY",
     profile.bio,
     "",
+    "EDUCATION",
+    ...education.map((item) => `- ${item.degree}, ${item.institution} (${item.period}) — ${item.score}`),
+    "",
     "EXPERIENCE",
     ...experiences.flatMap((experience) => [
-      `${experience.role} - ${experience.company}`,
-      experience.period,
+      `${experience.role} — ${experience.company}`,
+      `${experience.period} · ${experience.location}`,
       experience.summary,
       ...experience.impact.map((item) => `- ${item}`),
       "",
     ]),
     "PROJECTS",
-    ...projects.map((project) => `- ${project.title}: ${project.overview}`),
+    ...projects.map((project) => {
+      const link = project.liveUrl ? ` (${project.liveUrl})` : "";
+      return `- ${project.title}${project.period ? ` [${project.period}]` : ""}: ${project.overview}${link}`;
+    }),
     "",
     "ACHIEVEMENTS",
-    ...achievements.map((achievement) => `- ${achievement.label}: ${achievement.value} - ${achievement.detail}`),
+    ...achievements.map(
+      (achievement) =>
+        `- ${achievement.label}: ${achievement.value}${achievement.year ? ` (${achievement.year})` : ""} — ${achievement.detail}`,
+    ),
   ].join("\n");
 
   return new NextResponse(resume, {

@@ -9,80 +9,54 @@ import {
 import type { Experience, ExperienceHighlight } from "@/types";
 
 export const palmspireHighlights: ExperienceHighlight[] = [
-  {
-    label: "Websites delivered",
-    value: "50+",
-    icon: Globe,
-  },
-  {
-    label: "HubSpot CMS",
-    value: "Expert",
-    icon: LayoutDashboard,
-  },
-  {
-    label: "HubDB development",
-    value: "Advanced",
-    icon: Database,
-  },
-  {
-    label: "API integrations",
-    value: "Production",
-    icon: Plug,
-  },
-  {
-    label: "Membership systems",
-    value: "Built",
-    icon: KeyRound,
-  },
+  { label: "Websites delivered", value: "50+", icon: Globe },
+  { label: "HubSpot CMS", value: "Expert", icon: LayoutDashboard },
+  { label: "HubDB development", value: "Advanced", icon: Database },
+  { label: "API integrations", value: "Production", icon: Plug },
+  { label: "Membership systems", value: "Built", icon: KeyRound },
 ];
 
 export const experiences: Experience[] = [
   {
-    role: "HubSpot CMS Developer | Python Developer",
+    role: "HubSpot CMS Developer",
     company: "Palmspire Technology",
-    period: "Jun 2024 – Present",
+    period: "Aug 2024 – Present",
     employmentType: "Full-time",
-    location: "Remote, India",
+    location: "On-site, India",
     isCurrent: true,
     initials: "PT",
     accent: "from-primary/35 via-cyan-400/15 to-transparent",
     highlights: palmspireHighlights,
     summary:
-      "Own end-to-end delivery of client websites, HubSpot CMS platforms, HubDB structures, API integrations, and membership systems for production marketing and product teams.",
+      "Develop and launch client websites and landing pages using HubSpot CMS, WordPress, Next.js, HubL, and JavaScript — with advanced HubDB, REST API, membership, and CRM-connected delivery.",
     impact: [
-      "Delivered 50+ production websites and landing pages with reusable HubL modules, responsive layouts, and editor-friendly CMS architecture.",
-      "Led HubDB development for dynamic content models powering events, directories, and multi-page client platforms.",
-      "Shipped API integrations and CRM-connected workflows linking HubSpot forms, external services, and business data.",
-      "Built membership systems with gated content, authentication flows, and access-controlled page experiences.",
-      "Extended delivery with Python and Flask utilities for automation, integration logic, and AI-oriented prototypes.",
+      "Developed and launched 50+ websites and landing pages using HubSpot CMS, WordPress (Elementor), Next.js, HTML, CSS, JavaScript, and HubL.",
+      "Built custom HubSpot modules, dynamic templates, blog listing/detail pages, resource libraries, eBooks, event systems, and scalable HubDB-driven experiences.",
+      "Implemented HubDB integrations, REST API integrations, custom forms, membership/login experiences, workflow automations, email templates, and CRM-connected solutions.",
+      "Created dynamic listing and detail pages for events, resources, blogs, tours, and directory-style content with maintainable CMS workflows for marketing teams.",
+      "Delivered custom WordPress solutions including Elementor websites, plugin enhancements, theme customization, and third-party integrations.",
+      "Shipped responsive, SEO-optimized, accessible, cross-browser compatible sites while collaborating with designers, marketers, and clients on requirements and technical consultation.",
+      "Applied Python and AI through professional and personal initiatives — machine learning, computer vision, and automation-based solutions.",
     ],
   },
   {
     role: "AI Intern",
     company: "OpenWeaver",
-    period: "Jan 2024 – May 2024",
+    period: "Aug 2023 – Sep 2023",
     employmentType: "Internship",
-    location: "India",
+    location: "Remote, India",
     initials: "OW",
     accent: "from-violet-400/25 via-indigo-400/10 to-transparent",
     highlights: [
-      {
-        label: "Python foundation",
-        value: "Core",
-        icon: Plug,
-      },
-      {
-        label: "AI workflows",
-        value: "Applied",
-        icon: Database,
-      },
+      { label: "NLP & Vision", value: "Applied", icon: Database },
+      { label: "PyTorch / TF", value: "Hands-on", icon: Plug },
     ],
     summary:
-      "AI-focused internship that established structured engineering habits and applied Python skills later used across production client work.",
+      "Completed a 4-week AI Engineering internship covering NLP, computer vision, and speech recognition with practical ML application builds.",
     impact: [
-      "Practiced end-to-end development across research, implementation, testing, and technical presentation.",
-      "Strengthened Python fundamentals and automation patterns carried into Palmspire delivery work.",
-      "Built an AI tooling foundation that informed computer-vision and machine-learning side projects.",
+      "Mastered Natural Language Processing, Computer Vision, and Speech Recognition fundamentals through structured internship modules.",
+      "Built practical applications in Sentiment Analysis, Disease Prediction, and Real-time Traffic Monitoring.",
+      "Used PyTorch and TensorFlow for state-of-the-art ML and AI tooling — foundation for later TensorFlow/OpenCV personal projects.",
     ],
   },
 ];

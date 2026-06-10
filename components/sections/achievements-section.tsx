@@ -23,7 +23,12 @@ export function AchievementsSection() {
             <motion.div key={achievement.label} variants={staggerItem}>
               <Card className="h-full">
                 <CardContent className="p-6">
-                  <p className="text-sm text-muted-foreground">{achievement.label}</p>
+                  <div className="flex items-start justify-between gap-2">
+                    <p className="text-sm text-muted-foreground">{achievement.label}</p>
+                    {achievement.year ? (
+                      <p className="font-mono text-xs text-primary">{achievement.year}</p>
+                    ) : null}
+                  </div>
                   <p className="mt-3 text-4xl font-semibold tracking-tight text-primary">{achievement.value}</p>
                   <p className="mt-4 text-sm leading-6 text-muted-foreground">{achievement.detail}</p>
                 </CardContent>

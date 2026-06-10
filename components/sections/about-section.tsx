@@ -30,16 +30,18 @@ export function AboutSection({ standalone = false }: { standalone?: boolean }) {
           <FadeIn>
             <SectionHeading
               eyebrow="About"
-              title="CMS engineering with business context."
+              title="HubSpot CMS developer with a CSE foundation."
               description={profile.bio}
+              as={standalone ? "h1" : "h2"}
             />
           </FadeIn>
           <FadeIn delay={0.08}>
             <Card className="overflow-hidden">
               <CardContent className="p-6 sm:p-8 lg:p-10">
                 <p className="text-base leading-8 text-muted-foreground sm:text-lg sm:leading-9">
-                  I work where marketing websites meet engineering: scalable HubSpot builds, reliable
-                  integrations, and Python tooling that helps teams ship faster without sacrificing maintainability.
+                  {profile.degree} from {profile.university}. I work where marketing websites meet
+                  engineering — HubSpot CMS, WordPress, HubDB, REST APIs, membership systems, and Python/AI
+                  prototypes that extend what teams can ship.
                 </p>
                 <div className="mt-10 grid gap-4">
                   {focusAreas.map((item) => (

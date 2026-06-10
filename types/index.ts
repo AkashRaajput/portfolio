@@ -14,6 +14,8 @@ export type Project = {
   accent: string;
   featured?: boolean;
   headline?: string;
+  period?: string;
+  liveUrl?: string;
 };
 
 export type ExperienceHighlight = {
@@ -36,6 +38,14 @@ export type Experience = {
   isCurrent?: boolean;
 };
 
+export type Education = {
+  institution: string;
+  degree: string;
+  period: string;
+  score: string;
+  location?: string;
+};
+
 export type SkillGroup = {
   title: string;
   icon: LucideIcon;
@@ -53,5 +63,13 @@ export type CoreSkill = {
 export type Achievement = {
   label: string;
   value: string;
+  detail: string;
+  year?: string;
+};
+
+export type VolunteerRole = {
+  role: string;
+  organization: string;
+  period: string;
   detail: string;
 };

@@ -79,6 +79,9 @@ export function ProjectCard({ project }: { project: Project }) {
           {project.headline ? (
             <p className="mt-2 text-sm font-medium text-primary/90">{project.headline}</p>
           ) : null}
+          {project.period ? (
+            <p className="mt-2 font-mono text-xs text-muted-foreground">{project.period}</p>
+          ) : null}
           <p className="mt-4 line-clamp-3 flex-1 text-sm leading-7 text-muted-foreground">{project.overview}</p>
 
           <div className="mt-5 flex flex-wrap gap-2">
@@ -126,13 +129,26 @@ export function ProjectCard({ project }: { project: Project }) {
             ))}
           </div>
 
-          <Link
-            href={`/projects/${project.slug}`}
-            className="mt-auto flex items-center justify-between border-t border-border/80 pt-5 text-sm font-medium text-primary"
-          >
-            Full case study
-            <ArrowUpRight className="size-4" />
-          </Link>
+          <div className="mt-auto flex flex-col gap-3 border-t border-border/80 pt-5">
+            {project.liveUrl ? (
+              <Link
+                href={project.liveUrl}
+                target="_blank"
+                rel="noreferrer"
+                className="flex items-center gap-2 text-sm font-medium text-primary"
+              >
+                View live site
+                <ArrowUpRight className="size-4" />
+              </Link>
+            ) : null}
+            <Link
+              href={`/projects/${project.slug}`}
+              className="flex items-center justify-between text-sm font-medium text-muted-foreground hover:text-primary"
+            >
+              Full case study
+              <ArrowUpRight className="size-4" />
+            </Link>
+          </div>
         </div>
 
         {/* Desktop hover detail panel */}
@@ -197,13 +213,26 @@ export function ProjectCard({ project }: { project: Project }) {
             </ProjectDetailBlock>
           </div>
 
-          <Link
-            href={`/projects/${project.slug}`}
-            className="mt-4 flex items-center justify-center gap-2 rounded-lg border border-primary/30 bg-primary/10 py-2.5 text-sm font-medium text-primary transition-colors hover:bg-primary/20"
-          >
-            View full case study
-            <ArrowUpRight className="size-4" />
-          </Link>
+          <div className="mt-4 flex flex-col gap-2 sm:flex-row">
+            {project.liveUrl ? (
+              <Link
+                href={project.liveUrl}
+                target="_blank"
+                rel="noreferrer"
+                className="flex flex-1 items-center justify-center gap-2 rounded-lg border border-border py-2.5 text-sm font-medium text-foreground transition-colors hover:border-primary/40 hover:bg-primary/5"
+              >
+                View live site
+                <ArrowUpRight className="size-4" />
+              </Link>
+            ) : null}
+            <Link
+              href={`/projects/${project.slug}`}
+              className="flex flex-1 items-center justify-center gap-2 rounded-lg border border-primary/30 bg-primary/10 py-2.5 text-sm font-medium text-primary transition-colors hover:bg-primary/20"
+            >
+              Full case study
+              <ArrowUpRight className="size-4" />
+            </Link>
+          </div>
         </div>
       </div>
     </motion.article>
