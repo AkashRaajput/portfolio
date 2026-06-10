@@ -1,50 +1,95 @@
+"use client";
+
+import Link from "next/link";
+import { useMemo, useState } from "react";
+import { AnimatePresence, motion } from "framer-motion";
+import { ArrowRight } from "lucide-react";
+
 import { ProjectCard } from "@/components/cards";
+import { ProjectFilter, type ProjectFilterValue } from "@/components/projects/project-filter";
 import { StaggerContainer } from "@/components/motion/stagger-container";
 import { Container } from "@/components/shared/container";
 import { SectionHeading } from "@/components/shared/section-heading";
-import { personalProjects, professionalProjects } from "@/data/projects";
+import { Button } from "@/components/ui/button";
+import { personalProjects, professionalProjects, projects } from "@/data/projects";
+
+function sortProjects(list: typeof projects) {
+  return [...list].sort((a, b) => {
+    if (a.featured && !b.featured) return -1;
+    if (!a.featured && b.featured) return 1;
+    return 0;
+  });
+}
 
 export function ProjectsSection({ standalone = false }: { standalone?: boolean }) {
+  const [filter, setFilter] = useState<ProjectFilterValue>("all");
+
+  const counts = useMemo(
+    () => ({
+      all: projects.length,
+      "Professional Project": professionalProjects.length,
+      "Personal Project": personalProjects.length,
+    }),
+    [],
+  );
+
+  const filteredProjects = useMemo(() => {
+    if (filter === "all") return sortProjects(projects);
+    return sortProjects(projects.filter((project) => project.category === filter));
+  }, [filter]);
+
   return (
-    <section id="projects" className={standalone ? "py-20 sm:py-24" : "py-16 sm:py-20"}>
+    <section
+      id="projects"
+      className={`section-divider ${standalone ? "section-padding" : "section-padding-sm"}`}
+    >
       <Container>
-        <SectionHeading
-          eyebrow="Projects"
-          title="Selected development work."
-          description="A practical look at personal AI projects and professional CMS work, focused on what was built, the technical approach, and the business outcome."
-        />
-
-        <div className="mt-12 grid gap-12">
-          <div>
-            <div className="mb-5 flex items-end justify-between gap-4 border-b border-border pb-4">
-              <div>
-                <p className="text-sm font-medium uppercase tracking-[0.2em] text-primary">Personal Projects</p>
-                <h3 className="mt-2 text-2xl font-semibold">Applied Python and machine learning</h3>
-              </div>
-              <p className="hidden text-sm text-muted-foreground sm:block">{personalProjects.length} case studies</p>
-            </div>
-            <StaggerContainer className="grid gap-5 md:grid-cols-2">
-              {personalProjects.map((project) => (
-                <ProjectCard key={project.title} project={project} />
-              ))}
-            </StaggerContainer>
-          </div>
-
-          <div>
-            <div className="mb-5 flex items-end justify-between gap-4 border-b border-border pb-4">
-              <div>
-                <p className="text-sm font-medium uppercase tracking-[0.2em] text-primary">Professional Projects</p>
-                <h3 className="mt-2 text-2xl font-semibold">HubSpot CMS and website delivery</h3>
-              </div>
-              <p className="hidden text-sm text-muted-foreground sm:block">{professionalProjects.length} case studies</p>
-            </div>
-            <StaggerContainer className="grid gap-5 md:grid-cols-2 xl:grid-cols-3">
-              {professionalProjects.map((project) => (
-                <ProjectCard key={project.title} project={project} />
-              ))}
-            </StaggerContainer>
-          </div>
+        <div className="flex flex-col gap-8 lg:flex-row lg:items-end lg:justify-between">
+          <SectionHeading
+            eyebrow="Projects"
+            title="Case studies across client delivery and applied engineering."
+            description="Hover a project to explore the problem, solution, stack, contributions, and results—or open the full write-up."
+            as={standalone ? "h1" : "h2"}
+          />
+          {!standalone ? (
+            <Button asChild variant="outline" className="w-fit shrink-0">
+              <Link href="/projects">
+                Full project index
+                <ArrowRight />
+              </Link>
+            </Button>
+          ) : null}
         </div>
+
+        <div className="mt-10 flex flex-col gap-6 sm:flex-row sm:items-center sm:justify-between lg:mt-12">
+          <ProjectFilter value={filter} onChange={setFilter} counts={counts} />
+          <p className="text-sm text-muted-foreground">
+            Showing{" "}
+            <span className="font-medium text-foreground">{filteredProjects.length}</span>{" "}
+            {filteredProjects.length === 1 ? "project" : "projects"}
+          </p>
+        </div>
+
+        <AnimatePresence mode="wait">
+          <motion.div
+            key={filter}
+            initial={{ opacity: 0, y: 12 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -8 }}
+            transition={{ duration: 0.35, ease: "easeOut" }}
+            className="mt-10 lg:mt-12"
+          >
+            <StaggerContainer className="grid gap-5 sm:grid-cols-2 xl:grid-cols-3">
+              {filteredProjects.map((project) => (
+                <ProjectCard key={project.slug} project={project} />
+              ))}
+            </StaggerContainer>
+          </motion.div>
+        </AnimatePresence>
+
+        {filteredProjects.length === 0 ? (
+          <p className="mt-10 text-center text-muted-foreground">No projects in this category.</p>
+        ) : null}
       </Container>
     </section>
   );

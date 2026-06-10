@@ -1,0 +1,28 @@
+---
+alwaysApply: true
+---
+
+# Akash Kumar Portfolio
+
+## Stack
+Next.js 15 App Router, TypeScript, Tailwind CSS v4, Framer Motion, shadcn/ui, Zod.
+
+## Architecture
+- `app/` — routes and pages
+- `components/` — UI (`ui/`), layout, sections, cards, motion, shared
+- `config/` — site config and navigation
+- `data/` — profile, projects, experience, skills (content layer)
+- `types/` — shared TypeScript types
+- `lib/` — utilities
+
+## Conventions
+- Dark theme only (`defaultTheme="dark"`, no system toggle)
+- Mobile-first responsive design
+- Reuse `Container`, `SectionHeading`, `FadeIn`, `StaggerContainer`
+- Content changes go in `data/` and `config/site.ts`, not hardcoded in components
+- Static generation for portfolio and project pages
+- Accessibility: semantic HTML, labels, skip link, `aria-current`, reduced-motion support
+- SEO: metadata, canonical URLs, sitemap, robots, Schema.org JSON-LD, OG images
+
+## Profile
+Akash Kumar — HubSpot CMS Developer | Python Developer | AI Enthusiast at Palmspire Technology.

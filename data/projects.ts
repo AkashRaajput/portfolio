@@ -23,6 +23,8 @@ export const projects: Project[] = [
     ],
     metric: "AI vision prototype",
     accent: "from-emerald-400/24 via-cyan-400/10 to-transparent",
+    featured: true,
+    headline: "CNN-based steering from live video frames",
   },
   {
     slug: "credit-card-fraud-detection",
@@ -69,29 +71,8 @@ export const projects: Project[] = [
     ],
     metric: "Events CMS",
     accent: "from-cyan-400/24 via-sky-400/10 to-transparent",
-  },
-  {
-    slug: "hubspot-experts-tours",
-    title: "HubSpot Experts Tours",
-    category: "Professional Project",
-    overview:
-      "A HubSpot-focused tour experience designed to present expert-led sessions, content, and conversion paths.",
-    problem:
-      "Tour-style campaign pages require flexible content management while keeping the visitor path simple and persuasive.",
-    solution:
-      "Implemented HubSpot CMS templates and modules that supported clean page composition, campaign messaging, and lead-focused calls to action.",
-    technologies: ["HubSpot CMS", "HubL", "HubDB", "Forms", "CRM Integrations"],
-    keyContributions: [
-      "Created editable HubSpot modules for tour content and campaign sections.",
-      "Supported HubSpot form and CRM-connected conversion flows.",
-      "Aligned page structure with marketing and content-management needs.",
-    ],
-    results: [
-      "Made campaign pages easier to manage inside HubSpot.",
-      "Improved consistency across tour content, forms, and lead capture areas.",
-    ],
-    metric: "HubSpot campaign",
-    accent: "from-orange-400/24 via-amber-400/10 to-transparent",
+    featured: true,
+    headline: "HubDB-powered events platform for Nemko",
   },
   {
     slug: "entelligence",
@@ -115,6 +96,8 @@ export const projects: Project[] = [
     ],
     metric: "B2B website",
     accent: "from-violet-400/20 via-teal-400/10 to-transparent",
+    featured: true,
+    headline: "Service-led B2B site with CRM conversion flows",
   },
   {
     slug: "flx-networks",
@@ -184,9 +167,12 @@ export const projects: Project[] = [
     ],
     metric: "Growth website",
     accent: "from-teal-400/24 via-blue-400/10 to-transparent",
+    featured: true,
+    headline: "Marketing CMS with HubDB and campaign-ready modules",
   },
 ];
 
+export const featuredProjects = projects.filter((project) => project.featured);
 export const personalProjects = projects.filter((project) => project.category === "Personal Project");
 export const professionalProjects = projects.filter((project) => project.category === "Professional Project");
 

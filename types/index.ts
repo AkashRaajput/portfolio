@@ -12,20 +12,42 @@ export type Project = {
   results: string[];
   metric: string;
   accent: string;
+  featured?: boolean;
+  headline?: string;
+};
+
+export type ExperienceHighlight = {
+  label: string;
+  value: string;
+  icon: LucideIcon;
 };
 
 export type Experience = {
   role: string;
   company: string;
   period: string;
+  employmentType: "Full-time" | "Internship";
+  location: string;
   summary: string;
   impact: string[];
+  highlights: ExperienceHighlight[];
+  accent: string;
+  initials: string;
+  isCurrent?: boolean;
 };
 
 export type SkillGroup = {
   title: string;
   icon: LucideIcon;
+  description: string;
   skills: string[];
+  featured?: boolean;
+};
+
+export type CoreSkill = {
+  name: string;
+  proficiency: number;
+  detail: string;
 };
 
 export type Achievement = {

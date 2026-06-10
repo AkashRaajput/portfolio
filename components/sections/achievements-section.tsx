@@ -10,7 +10,7 @@ import { achievements } from "@/data/skills";
 
 export function AchievementsSection() {
   return (
-    <section id="achievements" className="py-16 sm:py-20">
+    <section id="achievements" className="section-divider section-padding-sm">
       <Container>
         <SectionHeading
           eyebrow="Achievements"
@@ -18,7 +18,7 @@ export function AchievementsSection() {
           description="Highlights that reflect problem-solving ability, consistent learning, and production delivery experience."
           align="center"
         />
-        <StaggerContainer className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+        <StaggerContainer className="mt-14 grid gap-5 sm:grid-cols-2 lg:mt-16 lg:grid-cols-4">
           {achievements.map((achievement) => (
             <motion.div key={achievement.label} variants={staggerItem}>
               <Card className="h-full">

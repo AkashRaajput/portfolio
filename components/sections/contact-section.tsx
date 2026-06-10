@@ -55,9 +55,12 @@ export function ContactSection({ standalone = false }: { standalone?: boolean })
   }
 
   return (
-    <section id="contact" className={standalone ? "py-20 sm:py-24" : "py-16 sm:py-20"}>
+    <section
+      id="contact"
+      className={`section-divider ${standalone ? "section-padding" : "section-padding-sm"}`}
+    >
       <Container>
-        <div className="grid gap-10 lg:grid-cols-[0.9fr_1.1fr] lg:items-start">
+        <div className="grid gap-12 lg:grid-cols-[0.9fr_1.1fr] lg:items-start lg:gap-16">
           <FadeIn>
             <SectionHeading
               eyebrow="Contact"
