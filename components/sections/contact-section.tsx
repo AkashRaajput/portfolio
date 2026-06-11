@@ -41,14 +41,18 @@ export function ContactSection({ standalone = false }: { standalone?: boolean })
         }),
       });
 
+      const data = (await response.json().catch(() => null)) as { error?: string } | null;
+
       if (!response.ok) {
-        throw new Error("Contact request failed");
+        throw new Error(data?.error ?? "Contact request failed");
       }
 
       form.reset();
       toast.success("Message sent. I will get back to you soon.");
-    } catch {
-      toast.error("Something went wrong. Please email me directly instead.");
+    } catch (error) {
+      const message =
+        error instanceof Error ? error.message : "Something went wrong. Please email me directly instead.";
+      toast.error(message);
     } finally {
       setIsSubmitting(false);
     }
@@ -137,7 +141,13 @@ export function ContactSection({ standalone = false }: { standalone?: boolean })
                     <label htmlFor="contact-subject" className="text-sm font-medium">
                       Subject
                     </label>
-                    <Input id="contact-subject" name="subject" placeholder="Project inquiry" required />
+                    <Input
+                      id="contact-subject"
+                      name="subject"
+                      placeholder="Project inquiry"
+                      minLength={3}
+                      required
+                    />
                   </div>
                   <div className="grid gap-2">
                     <label htmlFor="contact-message" className="text-sm font-medium">
@@ -147,8 +157,10 @@ export function ContactSection({ standalone = false }: { standalone?: boolean })
                       id="contact-message"
                       name="message"
                       placeholder={`Hi ${profile.name.split(" ")[0]}, I would like to talk about...`}
+                      minLength={5}
                       required
                     />
+                    <p className="text-xs text-muted-foreground">Minimum 5 characters.</p>
                   </div>
                   <Button type="submit" size="lg" className="w-full sm:w-fit" disabled={isSubmitting}>
                     <Send />
