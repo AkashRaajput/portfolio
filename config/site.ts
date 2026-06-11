@@ -13,7 +13,7 @@ export const siteConfig = {
       process.env.NEXT_PUBLIC_LINKEDIN_URL ?? "https://www.linkedin.com/in/akash-kumar-a52195200/",
   },
   resume: {
-    href: "/resume",
+    href: "/resume/Akash_Kumar_CV.pdf",
     filename: "Akash_Kumar_CV.pdf",
   },
 };

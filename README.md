@@ -11,7 +11,7 @@ Premium portfolio for Akash Kumar, a HubSpot CMS Developer, Python Developer, an
 - Open Graph image generation
 - SEO metadata, canonical URLs, sitemap, robots file, and Schema.org JSON-LD
 - GitHub, LinkedIn, email, and resume calls to action
-- PDF resume download at `/resume` (`Akash_Kumar_CV.pdf`)
+- PDF resume download at `/resume/Akash_Kumar_CV.pdf`
 - Loading states, section animations, page transitions, and reduced-motion support
 - Vercel-ready configuration
 
@@ -109,4 +109,4 @@ Before final launch, run Lighthouse against the deployed Vercel URL and confirm 
 
 ## Resume Download
 
-The resume button points to `/resume`, which serves `app/resume/Akash_Kumar_CV.pdf`. Replace that file to update the downloadable CV.
+The resume button points to `/resume/Akash_Kumar_CV.pdf` in `public/resume/`. Replace that file to update the downloadable CV.
