@@ -1,9 +1,10 @@
 import type { WebsiteProject } from "@/types";
-import { getWebsiteScreenshotUrl } from "@/lib/screenshot-url";
+import { getProjectScreenshotPath } from "@/lib/screenshot-url";
 
-const wordpressProject = (project: Omit<WebsiteProject, "group">): WebsiteProject => ({
+const wordpressProject = (project: Omit<WebsiteProject, "group" | "screenshot">): WebsiteProject => ({
   ...project,
   group: "wordpress",
+  screenshot: getProjectScreenshotPath(project.slug),
 });
 
 export const wordpressProjects: WebsiteProject[] = [
@@ -11,7 +12,6 @@ export const wordpressProjects: WebsiteProject[] = [
     slug: "get-neffy",
     title: "Get Neffy",
     liveUrl: "https://visit.getneffy.com/",
-    screenshot: getWebsiteScreenshotUrl("https://visit.getneffy.com/"),
     headline: "Healthcare Patient Portal",
     period: "2024 – 2025",
     technologies: ["WordPress", "Elementor", "PHP", "JavaScript", "Responsive UI", "SEO"],
@@ -39,7 +39,6 @@ export const wordpressProjects: WebsiteProject[] = [
     slug: "landmark-aquatic",
     title: "Landmark Aquatic",
     liveUrl: "https://landmarkaquatic.com/",
-    screenshot: getWebsiteScreenshotUrl("https://landmarkaquatic.com/"),
     headline: "Commercial Aquatics Platform",
     period: "2024 – 2025",
     technologies: ["WordPress", "Custom Theme", "PHP", "SCSS", "JavaScript", "ACF"],
@@ -67,7 +66,6 @@ export const wordpressProjects: WebsiteProject[] = [
     slug: "crx-markets",
     title: "CRX Markets",
     liveUrl: "https://www.crxmarkets.com/",
-    screenshot: getWebsiteScreenshotUrl("https://www.crxmarkets.com/"),
     headline: "FinTech Corporate Platform",
     period: "2024 – 2025",
     technologies: ["WordPress", "Custom Development", "PHP", "JavaScript", "Multilingual", "SEO"],
@@ -95,7 +93,6 @@ export const wordpressProjects: WebsiteProject[] = [
     slug: "pipehorn",
     title: "Pipehorn",
     liveUrl: "https://pipehorn.com/",
-    screenshot: getWebsiteScreenshotUrl("https://pipehorn.com/"),
     headline: "Industrial Product Catalog",
     period: "2024 – 2025",
     technologies: ["WordPress", "WooCommerce", "PHP", "JavaScript", "Custom Post Types", "SEO"],
@@ -123,7 +120,6 @@ export const wordpressProjects: WebsiteProject[] = [
     slug: "real-gangsters",
     title: "Real Gangsters",
     liveUrl: "https://www.realgangsters.com/",
-    screenshot: getWebsiteScreenshotUrl("https://www.realgangsters.com/"),
     headline: "MMA Apparel E-commerce",
     period: "2024 – 2025",
     technologies: ["WordPress", "WooCommerce", "PHP", "JavaScript", "E-commerce", "Responsive UI"],
@@ -146,89 +142,5 @@ export const wordpressProjects: WebsiteProject[] = [
     ],
     metric: "WooCommerce store",
     accent: "from-rose-400/24 via-red-400/10 to-transparent",
-  }),
-  wordpressProject({
-    slug: "charter-and-co",
-    title: "Charter & Co",
-    liveUrl: "https://charter.film/",
-    screenshot: getWebsiteScreenshotUrl("https://charter.film/"),
-    headline: "Production Studio Portfolio",
-    period: "2024 – 2025",
-    technologies: ["WordPress", "Custom Theme", "JavaScript", "Video Integration", "Responsive UI", "SEO"],
-    description:
-      "WordPress portfolio for Charter—a commercial video production studio delivering commercials, branded documentaries, and anthem films for agencies and brand teams.",
-    challenge:
-      "Charter needed a visually driven WordPress site that could showcase film work, explain a four-stage production process, and convert agency inquiries without compromising cinematic presentation.",
-    approach:
-      "Built a custom WordPress theme centered on video case studies, process storytelling, and testimonial modules—with lazy-loaded media and responsive layouts for portfolio browsing.",
-    contributions: [
-      "Developed custom WordPress templates for commercial, documentary, and live session project showcases.",
-      "Built video embed and manifesto presentation modules with performance-conscious loading.",
-      "Implemented process-stage content sections for concepting through post-production.",
-      "Created testimonial and FAQ modules supporting agency and brand lead generation.",
-      "Optimized responsive layouts and SEO for creative production discovery.",
-    ],
-    businessImpact: [
-      "Gave Charter a portfolio platform that presents high-end production work to agency and brand prospects.",
-      "Streamlined inbound inquiry paths for commercial, documentary, and virtual production projects.",
-    ],
-    metric: "Creative portfolio",
-    accent: "from-fuchsia-400/20 via-purple-400/10 to-transparent",
-  }),
-  wordpressProject({
-    slug: "forge-virtual-studios",
-    title: "Forge Virtual Studios",
-    liveUrl: "https://forgevirtualstudios.com/",
-    screenshot: getWebsiteScreenshotUrl("https://forgevirtualstudios.com/"),
-    headline: "Virtual Production Studio",
-    period: "2024 – 2025",
-    technologies: ["WordPress", "Custom Development", "JavaScript", "Video", "Responsive UI", "SEO"],
-    description:
-      "WordPress site for Forge Virtual Studios—a Chicago-area LED volume virtual production facility with two stages, Unreal Engine workflows, and hospitality-focused studio rentals.",
-    challenge:
-      "Forge needed a WordPress site that could communicate technical studio specs, showcase LED volume capabilities, and convert production teams researching virtual production near Chicago.",
-    approach:
-      "Structured WordPress around studio stages, tech specifications, amenity highlights, and client testimonials—with video-forward layouts and location convenience content.",
-    contributions: [
-      "Built custom WordPress sections for Studio A and Studio B LED volume specifications.",
-      "Developed tech spec, amenity, and location proximity modules for production team research.",
-      "Implemented video hero and testimonial components for virtual production case studies.",
-      "Created FAQ and booking inquiry flows for studio rental lead generation.",
-      "Optimized responsive performance for media-rich studio marketing pages.",
-    ],
-    businessImpact: [
-      "Positioned Forge as a Midwest virtual production destination for agencies, brands, and filmmakers.",
-      "Reduced sales cycle friction by surfacing studio specs, amenities, and client results upfront.",
-    ],
-    metric: "Studio marketing site",
-    accent: "from-emerald-400/24 via-lime-400/10 to-transparent",
-  }),
-  wordpressProject({
-    slug: "campaign-creators",
-    title: "Campaign Creators",
-    liveUrl: "https://www.campaigncreators.com/",
-    screenshot: getWebsiteScreenshotUrl("https://www.campaigncreators.com/"),
-    headline: "HubSpot Agency Website",
-    period: "2024 – 2025",
-    technologies: ["WordPress", "Custom Theme", "PHP", "JavaScript", "SEO", "Performance Optimization"],
-    description:
-      "WordPress marketing site for Campaign Creators—an Elite HubSpot Solutions Partner offering enterprise HubSpot implementation, replatforming, and revenue system architecture.",
-    challenge:
-      "An Elite-tier HubSpot agency needed its own WordPress site to communicate complex service offerings, accreditations, and enterprise case studies while maintaining fast performance and clear conversion paths.",
-    approach:
-      "Delivered a modular WordPress build with service vertical pages, case study structures, and accreditation proof—optimized for SEO and lead capture across multiple HubSpot service lines.",
-    contributions: [
-      "Developed custom WordPress templates for enterprise HubSpot service and capability pages.",
-      "Built case study and client logo modules highlighting CoreSite, ASU, and other replatforming wins.",
-      "Implemented blog and insights publishing architecture for HubSpot strategy content.",
-      "Structured conversion-focused landing sections for HubSpot onboarding and audit requests.",
-      "Optimized Core Web Vitals and SEO across service and resource pages.",
-    ],
-    businessImpact: [
-      "Gave Campaign Creators a credible web platform aligned with their Elite HubSpot Solutions Partner positioning.",
-      "Improved inbound lead capture for enterprise HubSpot implementation and replatforming engagements.",
-    ],
-    metric: "Agency marketing CMS",
-    accent: "from-blue-400/24 via-sky-400/10 to-transparent",
   }),
 ];

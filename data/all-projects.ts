@@ -1,4 +1,5 @@
 import { websiteProjectToCaseStudy } from "@/lib/project-utils";
+import { mlProjects } from "@/data/ml-projects";
 import { platformProjects } from "@/data/platform-projects";
 import { projects as hubspotProjects } from "@/data/projects";
 import { wordpressProjects } from "@/data/wordpress-projects";
@@ -8,6 +9,7 @@ export const projects = [
   ...hubspotProjects.map((project) => ({ ...project, projectGroup: "hubspot" as const })),
   ...wordpressProjects.map(websiteProjectToCaseStudy),
   ...platformProjects.map(websiteProjectToCaseStudy),
+  ...mlProjects.map((project) => ({ ...project, projectGroup: "personal" as const })),
 ];
 
 export const featuredProjects = projects.filter((project) => project.featured);

@@ -176,6 +176,90 @@ export const projects: Project[] = [
     accent: "from-rose-400/20 via-orange-400/10 to-transparent",
     headline: "Marketing Automation & Lead Routing",
   },
+  {
+    slug: "campaign-creators-website",
+    title: "Campaign Creators Website",
+    category: "Professional Project",
+    period: "2024 – Present",
+    liveUrl: "https://www.campaigncreators.com/",
+    overview:
+      "HubSpot CMS marketing site for Campaign Creators—an Elite HubSpot Solutions Partner offering enterprise implementation, replatforming, and revenue system architecture across all Hubs.",
+    problem:
+      "An Elite-tier HubSpot agency needed a CMS-driven site to communicate complex service offerings, accreditations, and enterprise case studies while maintaining fast performance and clear conversion paths.",
+    solution:
+      "Delivered HubSpot CMS templates with service vertical pages, case study modules, accreditation proof, and conversion-focused landing sections optimized for SEO and lead capture.",
+    technologies: ["HubSpot CMS", "HubL", "HubDB", "JavaScript", "SEO", "CRM Integrations"],
+    keyContributions: [
+      "Developed HubSpot CMS templates for enterprise service and capability pages.",
+      "Built case study and client logo modules highlighting CoreSite, ASU, and replatforming wins.",
+      "Implemented blog and insights publishing architecture for HubSpot strategy content.",
+      "Structured conversion-focused landing sections for HubSpot onboarding and audit requests.",
+      "Optimized Core Web Vitals and SEO across service and resource pages.",
+    ],
+    results: [
+      "Gave Campaign Creators a credible HubSpot CMS platform aligned with Elite Solutions Partner positioning.",
+      "Improved inbound lead capture for enterprise HubSpot implementation and replatforming engagements.",
+    ],
+    metric: "Agency marketing CMS",
+    accent: "from-blue-400/24 via-sky-400/10 to-transparent",
+    headline: "Elite HubSpot Agency Site",
+  },
+  {
+    slug: "charter-and-co",
+    title: "Charter & Co",
+    category: "Professional Project",
+    period: "2024 – Present",
+    liveUrl: "https://charter.film/",
+    overview:
+      "HubSpot CMS portfolio for Charter—a commercial video production studio delivering commercials, branded documentaries, and anthem films for agencies and brand teams.",
+    problem:
+      "Charter needed a visually driven HubSpot CMS site that could showcase film work, explain a four-stage production process, and convert agency inquiries without compromising cinematic presentation.",
+    solution:
+      "Built HubSpot CMS templates centered on video case studies, process storytelling, and testimonial modules—with performance-conscious media loading and responsive portfolio layouts.",
+    technologies: ["HubSpot CMS", "HubL", "JavaScript", "Video Integration", "Responsive UI", "SEO"],
+    keyContributions: [
+      "Developed HubSpot CMS templates for commercial, documentary, and live session project showcases.",
+      "Built video embed and manifesto presentation modules with performance-conscious loading.",
+      "Implemented process-stage content sections for concepting through post-production.",
+      "Created testimonial and FAQ modules supporting agency and brand lead generation.",
+      "Optimized responsive layouts and SEO for creative production discovery.",
+    ],
+    results: [
+      "Gave Charter a portfolio platform that presents high-end production work to agency and brand prospects.",
+      "Streamlined inbound inquiry paths for commercial, documentary, and virtual production projects.",
+    ],
+    metric: "Creative portfolio",
+    accent: "from-fuchsia-400/20 via-purple-400/10 to-transparent",
+    headline: "Production Studio Portfolio",
+  },
+  {
+    slug: "forge-virtual-studios",
+    title: "Forge Virtual Studios",
+    category: "Professional Project",
+    period: "2024 – Present",
+    liveUrl: "https://forgevirtualstudios.com/",
+    overview:
+      "HubSpot CMS site for Forge Virtual Studios—a Chicago-area LED volume virtual production facility with two stages, Unreal Engine workflows, and hospitality-focused studio rentals.",
+    problem:
+      "Forge needed a HubSpot CMS site that could communicate technical studio specs, showcase LED volume capabilities, and convert production teams researching virtual production near Chicago.",
+    solution:
+      "Structured HubSpot CMS pages around studio stages, tech specifications, amenity highlights, and client testimonials—with video-forward layouts and location convenience content.",
+    technologies: ["HubSpot CMS", "HubL", "HubDB", "JavaScript", "Video", "Responsive UI"],
+    keyContributions: [
+      "Built HubSpot CMS sections for Studio A and Studio B LED volume specifications.",
+      "Developed tech spec, amenity, and location proximity modules for production team research.",
+      "Implemented video hero and testimonial components for virtual production case studies.",
+      "Created FAQ and booking inquiry flows for studio rental lead generation.",
+      "Optimized responsive performance for media-rich studio marketing pages.",
+    ],
+    results: [
+      "Positioned Forge as a Midwest virtual production destination for agencies, brands, and filmmakers.",
+      "Reduced sales cycle friction by surfacing studio specs, amenities, and client results upfront.",
+    ],
+    metric: "Studio marketing site",
+    accent: "from-emerald-400/24 via-lime-400/10 to-transparent",
+    headline: "Virtual Production Studio",
+  },
 ];
 
 export const featuredProjects = projects.filter((project) => project.featured);

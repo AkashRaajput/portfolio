@@ -1,12 +1,16 @@
 "use client";
 
+import { ProjectCard } from "@/components/cards";
 import { StaggerContainer } from "@/components/motion/stagger-container";
-import { WebsiteProjectCard } from "@/components/cards/website-project-card";
 import { Container } from "@/components/shared/container";
 import { SectionHeading } from "@/components/shared/section-heading";
 import { nextjsProjects, personalBuildProjects } from "@/data/platform-projects";
+import { websiteProjectToCaseStudy } from "@/lib/project-utils";
 
 export function PlatformProjectsSection({ standalone = false }: { standalone?: boolean }) {
+  const nextjsCaseStudies = nextjsProjects.map(websiteProjectToCaseStudy);
+  const personalCaseStudies = personalBuildProjects.map(websiteProjectToCaseStudy);
+
   return (
     <section
       id="platform-projects"
@@ -28,8 +32,8 @@ export function PlatformProjectsSection({ standalone = false }: { standalone?: b
               HubSpot theme delivery and team onboarding.
             </p>
             <StaggerContainer className="mt-8 grid gap-5 sm:grid-cols-2 xl:grid-cols-3">
-              {nextjsProjects.map((project) => (
-                <WebsiteProjectCard key={project.slug} project={project} />
+              {nextjsCaseStudies.map((project) => (
+                <ProjectCard key={project.slug} project={project} />
               ))}
             </StaggerContainer>
           </div>
@@ -41,8 +45,8 @@ export function PlatformProjectsSection({ standalone = false }: { standalone?: b
               processing outside client delivery.
             </p>
             <StaggerContainer className="mt-8 grid gap-5 sm:grid-cols-2 xl:grid-cols-3">
-              {personalBuildProjects.map((project) => (
-                <WebsiteProjectCard key={project.slug} project={project} />
+              {personalCaseStudies.map((project) => (
+                <ProjectCard key={project.slug} project={project} />
               ))}
             </StaggerContainer>
           </div>
