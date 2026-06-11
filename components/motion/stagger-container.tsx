@@ -8,8 +8,7 @@ export function StaggerContainer({ className, ...props }: HTMLMotionProps<"div">
   return (
     <motion.div
       initial="hidden"
-      whileInView="show"
-      viewport={{ once: true, margin: "-80px" }}
+      animate="show"
       variants={{
         hidden: {},
         show: {
