@@ -18,15 +18,14 @@ export function ExperienceSection({ standalone = false }: { standalone?: boolean
       <Container>
         <SectionHeading
           eyebrow="Experience"
-          title="HubSpot CMS developer delivering 50+ production websites."
-          description="Full-time at Palmspire Technology since Aug 2024 — HubSpot CMS, HubDB, WordPress, REST API integrations, membership systems, and Python/AI work. Previously AI Intern at OpenWeaver."
+          title="Work history"
+          description="HubSpot CMS Developer at Palmspire Technology since Aug 2024. Previously AI Intern at OpenWeaver."
           as={standalone ? "h1" : "h2"}
         />
 
         <ExperienceHighlights items={palmspireHighlights} />
 
         <div className="relative mt-12 sm:mt-16 lg:mt-20">
-          {/* Animated timeline spine — desktop only */}
           <div
             className="pointer-events-none absolute bottom-0 left-1/2 top-0 hidden w-px -translate-x-px bg-border lg:block"
             aria-hidden="true"

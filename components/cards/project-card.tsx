@@ -94,7 +94,7 @@ export function ProjectCard({ project }: { project: Project }) {
 
           <div className="mt-6 flex items-center justify-between border-t border-border/80 pt-5">
             <span className="font-mono text-xs text-primary">{project.metric}</span>
-            <span className="text-xs text-muted-foreground">Hover for details</span>
+            <span className="text-xs text-muted-foreground">View details</span>
           </div>
         </div>
 
@@ -145,7 +145,7 @@ export function ProjectCard({ project }: { project: Project }) {
               href={`/projects/${project.slug}`}
               className="flex items-center justify-between text-sm font-medium text-muted-foreground hover:text-primary"
             >
-              Full case study
+              View project
               <ArrowUpRight className="size-4" />
             </Link>
           </div>
@@ -165,7 +165,7 @@ export function ProjectCard({ project }: { project: Project }) {
             <Link
               href={`/projects/${project.slug}`}
               className="flex size-9 shrink-0 items-center justify-center rounded-lg border border-border bg-primary text-primary-foreground transition-transform hover:scale-105"
-              aria-label={`Open ${project.title} case study`}
+              aria-label={`Open ${project.title}`}
             >
               <ArrowUpRight className="size-4" />
             </Link>
@@ -229,7 +229,7 @@ export function ProjectCard({ project }: { project: Project }) {
               href={`/projects/${project.slug}`}
               className="flex flex-1 items-center justify-center gap-2 rounded-lg border border-primary/30 bg-primary/10 py-2.5 text-sm font-medium text-primary transition-colors hover:bg-primary/20"
             >
-              Full case study
+              View project
               <ArrowUpRight className="size-4" />
             </Link>
           </div>

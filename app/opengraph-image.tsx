@@ -2,7 +2,7 @@ import { ImageResponse } from "next/og";
 
 import { siteConfig } from "@/config/site";
 
-export const alt = `${siteConfig.name} portfolio preview`;
+export const alt = `${siteConfig.name} — ${siteConfig.role}`;
 export const size = {
   width: 1200,
   height: 630,
@@ -26,9 +26,8 @@ export default function OpenGraphImage() {
           fontFamily: "Arial, sans-serif",
         }}
       >
-        <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center" }}>
-          <div style={{ display: "flex", fontSize: "28px", color: "#5eead4", fontWeight: 700 }}>Portfolio</div>
-          <div style={{ display: "flex", fontSize: "28px", color: "#cbd5e1" }}>2 Years Experience</div>
+        <div style={{ display: "flex", fontSize: "28px", color: "#5eead4", fontWeight: 700 }}>
+          {siteConfig.role}
         </div>
 
         <div style={{ display: "flex", flexDirection: "column" }}>
@@ -45,7 +44,7 @@ export default function OpenGraphImage() {
               color: "#cbd5e1",
             }}
           >
-            HubSpot CMS Developer | Python Developer | AI Enthusiast
+            {siteConfig.description}
           </div>
         </div>
 

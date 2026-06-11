@@ -76,7 +76,7 @@ export const achievements: Achievement[] = [
   {
     label: "JEE Mains",
     value: "Qualified",
-    detail: "Cleared Joint Entrance Examination (Mains), demonstrating strong analytical preparation.",
+    detail: "Qualified Joint Entrance Examination (Mains), 2019.",
     year: "2019",
   },
   {

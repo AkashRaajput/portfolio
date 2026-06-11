@@ -27,6 +27,6 @@ export const volunteerRoles: VolunteerRole[] = [
     role: "Social Entrepreneur",
     organization: "Hamari Pahchan NGO",
     period: "Aug 2023 – Nov 2023",
-    detail: "Led social entrepreneurship initiatives and community engagement programs as part of NGO outreach.",
+    detail: "Volunteered on outreach and community programs for Hamari Pahchan NGO.",
   },
 ];

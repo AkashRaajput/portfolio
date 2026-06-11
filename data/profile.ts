@@ -9,11 +9,11 @@ export const profile = {
   company: "Palmspire Technology",
   degree: "B.Tech Computer Science Engineering",
   university: "Dev Bhoomi Institute of Technology, Dehradun",
-  headline: "50+ HubSpot CMS websites, HubDB systems, and CRM-connected integrations.",
+  headline: "HubSpot CMS websites, HubDB, and CRM integrations.",
   tagline:
-    "HubSpot CMS Developer at Palmspire Technology — shipping production websites, WordPress builds, HubDB-driven platforms, REST API integrations, and Python/AI side projects.",
-  bio: "B.Tech CSE graduate and HubSpot CMS Developer at Palmspire Technology with 50+ websites and landing pages delivered across HubSpot CMS, WordPress, Next.js, and HubL. Experienced in HubDB, REST API integrations, membership systems, CRM workflows, and applied Python/AI development.",
-  availability: "Open to HubSpot CMS, full-stack, and Python roles",
+    "HubSpot CMS Developer at Palmspire Technology. I build client sites on HubSpot CMS and WordPress, with HubDB, REST APIs, and Python on the side.",
+  bio: "B.Tech CSE graduate working as a HubSpot CMS Developer at Palmspire Technology. Day-to-day work spans HubSpot CMS, WordPress, HubL, HubDB, REST API integrations, and membership systems.",
+  availability: "Open to HubSpot CMS and full-stack roles",
   stats: [
     { label: "Sites delivered", value: "50+" },
     { label: "Experience", value: "2+ yrs" },
@@ -24,12 +24,11 @@ export const profile = {
     "HubDB & HubL",
     "WordPress",
     "API Integrations",
-    "50+ Sites",
   ],
   quickFacts: [
     { icon: Building2, label: "HubSpot CMS Developer at Palmspire Technology · Aug 2024 – Present · On-site" },
     { icon: GraduationCap, label: "B.Tech CSE, Dev Bhoomi Institute of Technology, Dehradun (2024)" },
-    { icon: Rocket, label: "50+ websites across HubSpot CMS, WordPress, Next.js, and HubL" },
+    { icon: Rocket, label: "Client sites across HubSpot CMS, WordPress, and Next.js" },
     { icon: MapPin, label: siteConfig.location },
   ],
   socials: [

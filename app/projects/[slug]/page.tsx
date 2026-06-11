@@ -34,7 +34,7 @@ export async function generateMetadata({ params }: ProjectDetailPageProps): Prom
 
   return {
     title: project.title,
-    description: `${project.title} case study by ${siteConfig.name}: ${project.overview}`,
+    description: `${project.title} — ${project.overview}`,
     alternates: {
       canonical: `${siteConfig.url}/projects/${project.slug}`,
     },
@@ -48,7 +48,7 @@ export async function generateMetadata({ params }: ProjectDetailPageProps): Prom
           url: "/opengraph-image",
           width: 1200,
           height: 630,
-          alt: `${project.title} case study`,
+          alt: project.title,
         },
       ],
     },

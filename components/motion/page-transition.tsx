@@ -4,10 +4,7 @@ import type { ReactNode } from "react";
 import { useEffect } from "react";
 import { usePathname } from "next/navigation";
 
-/**
- * Scrolls to top on route change.
- * Avoid AnimatePresence on root layout children — it causes blank pages with the App Router.
- */
+// Scroll to top on route change. AnimatePresence on layout children breaks App Router navigation.
 export function PageTransition({ children }: { children: ReactNode }) {
   const pathname = usePathname();
 

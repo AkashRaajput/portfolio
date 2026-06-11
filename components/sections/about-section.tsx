@@ -30,7 +30,7 @@ export function AboutSection({ standalone = false }: { standalone?: boolean }) {
           <FadeIn>
             <SectionHeading
               eyebrow="About"
-              title="HubSpot CMS developer with a CSE foundation."
+              title="Background"
               description={profile.bio}
               as={standalone ? "h1" : "h2"}
             />

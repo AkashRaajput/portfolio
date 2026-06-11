@@ -58,7 +58,7 @@ export function EducationSection({ standalone = false }: { standalone?: boolean 
         {volunteerRoles.length > 0 ? (
           <div className="mt-12">
             <p className="eyebrow">Community</p>
-            <h3 className="mt-3 text-xl font-semibold tracking-tight">Positions of responsibility</h3>
+            <h3 className="mt-3 text-xl font-semibold tracking-tight">Volunteering</h3>
             <StaggerContainer className="mt-6 grid gap-4">
               {volunteerRoles.map((role) => (
                 <motion.div

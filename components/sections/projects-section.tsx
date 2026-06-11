@@ -47,8 +47,8 @@ export function ProjectsSection({ standalone = false }: { standalone?: boolean }
         <div className="flex flex-col gap-8 lg:flex-row lg:items-end lg:justify-between">
           <SectionHeading
             eyebrow="Projects"
-            title="Case studies across client delivery and applied engineering."
-            description="Hover a project to explore the problem, solution, stack, contributions, and results—or open the full write-up."
+            title="Selected projects"
+            description="Client work and personal builds across HubSpot CMS, integrations, and Python."
             as={standalone ? "h1" : "h2"}
           />
           {!standalone ? (

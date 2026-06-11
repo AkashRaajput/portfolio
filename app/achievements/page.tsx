@@ -5,7 +5,7 @@ import { siteConfig } from "@/config/site";
 
 export const metadata: Metadata = {
   title: "Achievements",
-  description: "Achievements including JEE Mains Qualified, HackerRank Gold Badge, AMCAT 99 Percentile, and 50+ delivered websites.",
+  description: "Academic and professional milestones for Akash Kumar.",
   alternates: {
     canonical: `${siteConfig.url}/achievements`,
   },

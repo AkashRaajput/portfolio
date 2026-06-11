@@ -1,9 +1,9 @@
 export const siteConfig = {
   name: "Akash Kumar",
-  role: "HubSpot CMS Developer | Python Developer | AI Enthusiast",
-  url: process.env.NEXT_PUBLIC_SITE_URL ?? "https://akashkumar.dev",
+  role: "HubSpot CMS Developer",
+  url: process.env.NEXT_PUBLIC_SITE_URL ?? "https://portfolio-kappa-gray-11.vercel.app",
   description:
-    "Portfolio of Akash Kumar — HubSpot CMS Developer at Palmspire Technology with 50+ websites delivered, HubDB expertise, API integrations, and Python/AI projects.",
+    "Portfolio of Akash Kumar — HubSpot CMS Developer at Palmspire Technology.",
   email: process.env.NEXT_PUBLIC_CONTACT_EMAIL ?? "akashrajput8265@gmail.com",
   phone: process.env.NEXT_PUBLIC_CONTACT_PHONE ?? "+918923896991",
   location: "Dehradun, India",

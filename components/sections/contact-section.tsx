@@ -68,8 +68,8 @@ export function ContactSection({ standalone = false }: { standalone?: boolean })
           <FadeIn>
             <SectionHeading
               eyebrow="Contact"
-              title="Have a role, product, or collaboration in mind?"
-              description="Send a short note and I will reply with availability, context, and next steps."
+              title="Get in touch"
+              description="Email me directly or use the form below."
               as={standalone ? "h1" : "h2"}
             />
             <div className="mt-8 grid gap-4">

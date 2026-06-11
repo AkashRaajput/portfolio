@@ -156,7 +156,7 @@ export function HeroSection() {
             <div>
               <p className="eyebrow">Featured work</p>
               <h2 className="mt-3 text-2xl font-semibold tracking-tight sm:text-3xl">
-                Recent client and product delivery
+                Recent projects
               </h2>
             </div>
             <Button asChild variant="ghost" className="w-fit text-primary">

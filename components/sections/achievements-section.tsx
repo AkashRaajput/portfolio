@@ -14,8 +14,8 @@ export function AchievementsSection() {
       <Container>
         <SectionHeading
           eyebrow="Achievements"
-          title="Academic, coding, and professional milestones."
-          description="Highlights that reflect problem-solving ability, consistent learning, and production delivery experience."
+          title="Achievements"
+          description="Academic results, certifications, and delivery milestones."
           align="center"
         />
         <StaggerContainer className="mt-14 grid gap-5 sm:grid-cols-2 lg:mt-16 lg:grid-cols-4">

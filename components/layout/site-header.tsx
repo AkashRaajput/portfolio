@@ -48,7 +48,7 @@ export function SiteHeader() {
             </Link>
           </Button>
           <Button asChild size="sm">
-            <Link href="/contact">Hire me</Link>
+            <Link href="/contact">Contact</Link>
           </Button>
         </div>
 

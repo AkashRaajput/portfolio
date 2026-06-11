@@ -1,6 +1,7 @@
 {
-  "name": "developer-portfolio",
+  "name": "akash-kumar-portfolio",
   "version": "0.1.0",
+  "description": "Personal portfolio site for Akash Kumar",
   "private": true,
   "scripts": {
     "dev": "next dev",

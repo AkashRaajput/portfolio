@@ -12,17 +12,14 @@ export function SkillsSection() {
       <Container>
         <SectionHeading
           eyebrow="Skills"
-          title="Production stack for CMS delivery, integrations, and Python."
-          description="Depth where it matters for client work—HubSpot CMS, CRM-connected systems, modern JavaScript, and Python services."
+          title="Skills and tools"
+          description="Technologies used in client delivery and personal projects."
         />
 
         <StaggerContainer className="mt-14 grid gap-5 lg:mt-16 lg:grid-cols-2">
           <motion.div variants={staggerItem} className="glass rounded-2xl p-6 sm:p-8">
             <p className="eyebrow">Core competencies</p>
-            <h3 className="mt-4 text-2xl font-semibold tracking-tight">Where I operate daily</h3>
-            <p className="mt-3 text-sm leading-7 text-muted-foreground">
-              Proficiency built through repeated client delivery—not tutorial completion.
-            </p>
+            <h3 className="mt-4 text-2xl font-semibold tracking-tight">Core skills</h3>
 
             <div className="mt-8 grid gap-6">
               {coreSkills.map((skill, index) => (

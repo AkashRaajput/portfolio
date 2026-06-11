@@ -10,7 +10,7 @@ export function SchemaMarkup() {
     url: siteConfig.url,
     email: siteConfig.email,
     telephone: siteConfig.phone,
-    jobTitle: "HubSpot CMS Developer",
+    jobTitle: siteConfig.role,
     worksFor: {
       "@type": "Organization",
       name: "Palmspire Technology",
@@ -56,7 +56,7 @@ export function SchemaMarkup() {
   const portfolioSchema = {
     "@context": "https://schema.org",
     "@type": "ProfilePage",
-    name: `${siteConfig.name} - ${siteConfig.role}`,
+    name: `${siteConfig.name} — ${siteConfig.role}`,
     url: siteConfig.url,
     description: profile.bio,
     mainEntity: personSchema,

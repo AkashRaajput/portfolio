@@ -134,7 +134,6 @@ export function ExperienceCard({
 
   return (
     <motion.article variants={staggerItem} className="relative">
-      {/* Mobile & tablet: stacked cards — no overlapping timeline rail */}
       <div className={cn("lg:hidden", !isLast && "pb-8")}>
         <ExperienceMeta experience={experience} className="mb-4" />
         <div className="relative">
@@ -142,7 +141,6 @@ export function ExperienceCard({
         </div>
       </div>
 
-      {/* Desktop: alternating timeline */}
       <div
         className={cn(
           "relative hidden gap-12 lg:grid lg:grid-cols-2",

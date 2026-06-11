@@ -10,10 +10,10 @@ import type { Experience, ExperienceHighlight } from "@/types";
 
 export const palmspireHighlights: ExperienceHighlight[] = [
   { label: "Websites delivered", value: "50+", icon: Globe },
-  { label: "HubSpot CMS", value: "Expert", icon: LayoutDashboard },
-  { label: "HubDB development", value: "Advanced", icon: Database },
-  { label: "API integrations", value: "Production", icon: Plug },
-  { label: "Membership systems", value: "Built", icon: KeyRound },
+  { label: "HubSpot CMS", value: "Primary", icon: LayoutDashboard },
+  { label: "HubDB development", value: "HubDB", icon: Database },
+  { label: "API integrations", value: "REST", icon: Plug },
+  { label: "Membership systems", value: "Auth flows", icon: KeyRound },
 ];
 
 export const experiences: Experience[] = [
@@ -54,9 +54,9 @@ export const experiences: Experience[] = [
     summary:
       "Completed a 4-week AI Engineering internship covering NLP, computer vision, and speech recognition with practical ML application builds.",
     impact: [
-      "Mastered Natural Language Processing, Computer Vision, and Speech Recognition fundamentals through structured internship modules.",
-      "Built practical applications in Sentiment Analysis, Disease Prediction, and Real-time Traffic Monitoring.",
-      "Used PyTorch and TensorFlow for state-of-the-art ML and AI tooling — foundation for later TensorFlow/OpenCV personal projects.",
+      "Completed modules on NLP, computer vision, and speech recognition.",
+      "Built sentiment analysis, disease prediction, and traffic monitoring prototypes.",
+      "Used PyTorch and TensorFlow for model training and evaluation.",
     ],
   },
 ];
