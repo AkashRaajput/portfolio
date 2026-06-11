@@ -2,217 +2,184 @@ import type { Project } from "@/types";
 
 export const projects: Project[] = [
   {
-    slug: "self-driving-car-ai",
-    title: "Self Driving Car Steering Prediction",
-    category: "Personal Project",
-    period: "May 2025 – Present",
-    overview:
-      "CNN-based steering angle prediction using computer vision and deep learning, with a Flask web app for image and video analysis.",
-    problem:
-      "Manual rule-based steering fails when road lighting, lane curvature, and visual noise vary across frames and driving conditions.",
-    solution:
-      "Built a TensorFlow/Keras CNN to predict steering angles from road images, with OpenCV preprocessing and a Flask interface for uploads and cloud deployment.",
-    technologies: ["TensorFlow", "Keras", "Flask", "OpenCV", "CNN", "Computer Vision"],
-    keyContributions: [
-      "Built a deep learning model using TensorFlow and Keras to predict steering angles from road images.",
-      "Developed a Flask web application supporting image and video uploads for steering prediction analysis.",
-      "Implemented OpenCV-based preprocessing, frame extraction, and video analysis workflows.",
-      "Integrated model inference with a responsive UI and deployed the application for cloud-based access.",
-    ],
-    results: [
-      "Delivered a working computer-vision prototype demonstrating autonomous-driving steering concepts.",
-      "Strengthened end-to-end skills across CNN training, OpenCV pipelines, and model-serving with Flask.",
-    ],
-    metric: "AI vision prototype",
-    accent: "from-emerald-400/24 via-cyan-400/10 to-transparent",
-    featured: true,
-    headline: "CNN steering prediction with Flask deployment",
-  },
-  {
-    slug: "credit-card-fraud-detection",
-    title: "Credit Card Fraud Detection",
-    category: "Personal Project",
-    period: "Feb 2024 – Jun 2024",
-    overview:
-      "Machine-learning pipeline for detecting fraudulent credit card transactions with interpretable classification workflows.",
-    problem:
-      "Fraudulent transactions are rare compared with legitimate activity, making reliable pattern discovery and classification difficult.",
-    solution:
-      "Engineered features and trained Logistic Regression and Random Forest classifiers with precision/recall-focused evaluation and feature-importance analysis.",
-    technologies: ["Python", "Scikit-learn", "Random Forest", "Logistic Regression", "Pandas", "NumPy"],
-    keyContributions: [
-      "Developed fraud detection models using Logistic Regression and Random Forest Classifier.",
-      "Performed feature engineering and model evaluation focusing on precision, recall, and fraud detection accuracy.",
-      "Created an interpretable workflow with feature-importance analysis for business decision support.",
-    ],
-    results: [
-      "Built a complete fraud-detection pipeline from data analysis through model evaluation.",
-      "Improved practical understanding of imbalanced classification and model interpretation.",
-    ],
-    metric: "ML classification",
-    accent: "from-amber-400/24 via-rose-400/10 to-transparent",
-  },
-  {
-    slug: "hubspot-experts-tours",
-    title: "HubSpot Experts Tours",
+    slug: "valiantys-ticketing-portal",
+    title: "Valiantys Ticketing Portal",
     category: "Professional Project",
-    period: "2024 – 2025",
-    liveUrl: "https://dev.hubspotexperts.com/tours",
+    period: "2024 – Present",
+    liveUrl: "https://www.valiantys.com",
     overview:
-      "HubSpot CMS tour experience with expert-led session content, campaign pages, and conversion-focused visitor journeys.",
+      "Built an enterprise ticketing portal on HubSpot CMS enabling customers to authenticate via Atlassian OAuth, view organization tickets, create tickets, comment on tickets, and access multiple Jira Service Management regions through a single unified portal.",
     problem:
-      "Tour-style campaign pages need flexible HubSpot content management while keeping registration paths simple and persuasive.",
+      "Enterprise customers across APAC, EMEA, and North America needed access to region-specific Jira Service Management instances without managing separate portals, credentials, or support workflows for each region.",
     solution:
-      "Built HubSpot CMS templates and HubL modules for tour content, dynamic sections, and CRM-connected lead capture flows.",
-    technologies: ["HubSpot CMS", "HubL", "HubDB", "JavaScript", "CRM Integrations"],
+      "Architected a unified HubSpot membership portal with multi-region routing, Atlassian OAuth authentication, secure session management, client-to-region mapping, and AWS deployment planning—connecting ticket viewing, creation, and commenting across JSM regions through one interface.",
+    technologies: [
+      "HubSpot CMS",
+      "HubSpot Memberships",
+      "HubDB",
+      "Node.js",
+      "TypeScript",
+      "AWS",
+      "Atlassian OAuth",
+      "Jira Service Management",
+    ],
     keyContributions: [
-      "Created editable HubSpot modules for tour listings, session content, and campaign sections.",
-      "Supported HubSpot form and CRM-connected conversion flows across tour pages.",
-      "Structured page architecture for marketing teams to update tour content independently.",
+      "Designed multi-region routing architecture for APAC, EMEA, and North America JSM access.",
+      "Built Atlassian OAuth integration flows for secure customer authentication.",
+      "Designed secure session management across the unified portal experience.",
+      "Planned ticket creation, detail, and comment management API architecture.",
+      "Implemented client-to-region mapping logic.",
+      "Designed AWS deployment architecture for the integration platform.",
+      "Created unified HubSpot portal experience consolidating regional JSM access.",
     ],
     results: [
-      "Delivered a maintainable tour platform inside HubSpot CMS.",
-      "Improved consistency across tour content, forms, and lead capture areas.",
+      "Enabled customers across APAC, EMEA, and North America to access Jira Service Management through a single portal.",
     ],
-    metric: "HubSpot campaign",
+    metric: "Enterprise support portal",
+    accent: "from-violet-400/24 via-indigo-400/10 to-transparent",
+    featured: true,
+    headline: "Enterprise Support Portal",
+  },
+  {
+    slug: "easy-travel-customer-portal",
+    title: "Easy Travel Customer Portal",
+    category: "Professional Project",
+    period: "2024 – Present",
+    liveUrl: "https://dev.hubspotexperts.com/portal-development-page",
+    overview:
+      "Developed a membership-based travel portal enabling customers to manage tours, resources, merchandise, FAQs, and personalized travel experiences through a centralized HubSpot CMS and HubDB platform.",
+    problem:
+      "Travel customers needed a single authenticated portal to manage purchased tours, merchandise, resources, FAQs, and personalized content—replacing fragmented post-purchase experiences across separate touchpoints.",
+    solution:
+      "Built a HubSpot membership portal with HubDB-backed data connections, personalized dashboards, Save Tour functionality, and integrated merchandise, resource, and profile management workflows.",
+    technologies: ["HubSpot Memberships", "HubDB", "HubSpot CMS", "JavaScript"],
+    keyContributions: [
+      "Built Save Tour functionality for customer tour management.",
+      "Created membership authentication flows and login/logout logic.",
+      "Developed personalized dashboards connected to purchased tour data.",
+      "Integrated merchandise workflows and resource delivery logic.",
+      "Implemented FAQ systems and profile management workflows.",
+      "Developed multi-tour support for customers with multiple active bookings.",
+    ],
+    results: [
+      "Delivered a centralized customer portal improving customer engagement and self-service capabilities.",
+    ],
+    metric: "Membership travel portal",
     accent: "from-orange-400/24 via-amber-400/10 to-transparent",
     featured: true,
-    headline: "Tour platform with CRM-connected conversion paths",
+    headline: "Membership Travel Portal",
   },
   {
-    slug: "nemko-events-platform",
-    title: "Nemko Events Platform",
+    slug: "gtia-resource-library",
+    title: "GTIA Resource Library",
     category: "Professional Project",
-    period: "2024 – 2025",
-    liveUrl: "https://www-nemko-com.sandbox.hs-sites.com/events",
+    period: "2024 – Present",
+    liveUrl: "https://gtia.org/resource-library",
     overview:
-      "HubDB-powered events platform for program listings, event details, and registration-focused user journeys.",
+      "Developed a HubDB-powered resource library with membership-based content access, gated listing and detail pages, reporting capabilities, and personalized content delivery for GTIA members.",
     problem:
-      "Event experiences require clear information architecture, fast content updates, and smooth registration pathways.",
+      "The organization needed to distribute resource content at scale while enforcing membership-based access, tracking engagement, and delivering personalized experiences based on session and membership state.",
     solution:
-      "Delivered HubDB-driven event listing and detail pages with reusable HubSpot modules and responsive layouts.",
-    technologies: ["HubSpot CMS", "HubL", "HubDB", "JavaScript", "Responsive UI"],
+      "Built a HubDB resource library with gated listing and detail pages, membership access logic, thank-you page workflows, reporting structures, and cookie- and session-based conditional content rendering.",
+    technologies: ["HubSpot CMS", "HubDB", "HubL", "JavaScript", "HubSpot Workflows"],
     keyContributions: [
-      "Built reusable event-focused page sections and editable CMS modules.",
-      "Structured HubDB content for events, programs, and campaign updates.",
-      "Improved responsive presentation across desktop, tablet, and mobile views.",
+      "Built HubDB listing pages and dynamic detail pages for resource content.",
+      "Implemented gated content experiences with membership access logic.",
+      "Developed thank-you page workflows and reporting structures.",
+      "Built tracking architecture for resource engagement.",
+      "Implemented cookie-based personalization and session-based membership detection.",
+      "Created conditional content rendering based on membership status.",
     ],
     results: [
-      "Created a maintainable event content experience for marketing teams.",
-      "Supported clearer visitor journeys from event discovery to registration.",
+      "Enabled scalable content distribution and membership-based resource delivery.",
     ],
-    metric: "Events CMS",
+    metric: "HubDB resource library",
     accent: "from-cyan-400/24 via-sky-400/10 to-transparent",
     featured: true,
-    headline: "HubDB-powered events platform for Nemko",
+    headline: "Membership Resource Library",
   },
   {
-    slug: "entelligence",
-    title: "Entelligence",
+    slug: "nemko-digital-experience-platform",
+    title: "Nemko Digital Experience Platform",
     category: "Professional Project",
-    period: "2024 – 2025",
-    liveUrl: "https://entelligence-2030188-hs-sites-com.sandbox.hs-sites.com/home",
+    period: "2024 – Present",
+    liveUrl: "https://www.nemko.com",
     overview:
-      "B2B website presenting services, expertise, and lead-generation content with a polished HubSpot CMS experience.",
+      "Delivered multiple HubDB-powered solutions for Nemko spanning a Global Market Access country comparison platform (nemko.com/services/global-market-access/select-by-country), a resource management library, and a dynamic events platform (nemko.com/resources/events)—forming a scalable HubDB ecosystem across the site.",
     problem:
-      "Service-led websites need trustworthy messaging, flexible page building, and reliable CRM-connected conversion points.",
+      "Nemko required multiple HubDB-driven experiences—a custom country comparison engine for global market access, a scalable resource library with gated and ungated content, and a dynamic events platform—each needing listing pages, detail routing, and content automation without redundant CMS overhead.",
     solution:
-      "Developed CMS-driven pages and modules balancing brand presentation, content editing, and conversion-focused layouts.",
-    technologies: ["HubSpot CMS", "HubL", "JavaScript", "CRM Integrations", "SEO"],
+      "Delivered an integrated HubDB ecosystem with a multi-country comparison engine, resource management platform with dynamic routing, and an events platform featuring HubDB slider integration, upcoming event filtering, and date-based automation.",
+    technologies: ["HubSpot CMS", "HubDB", "HubL", "JavaScript"],
     keyContributions: [
-      "Built responsive sections for service, proof, and conversion content.",
-      "Implemented CMS editing patterns for scalable page updates.",
-      "Supported CRM-aware forms and lead-generation flows.",
+      "Global Market Access: Built custom country comparison engine with dynamic HubDB integration, multi-country comparison functionality, drag-and-drop compatible modules, and responsive comparison tables.",
+      "Resource Management: Developed HubDB resource library with dynamic listing pages, detail pages, gated and ungated experiences, and dynamic routing.",
+      "Events Platform: Built dynamic event listings, event detail pages, event slider HubDB integration, upcoming event filtering, date-based automation, and dynamic content population.",
     ],
     results: [
-      "Delivered a professional site experience with maintainable CMS controls.",
-      "Aligned marketing pages with lead-generation workflows.",
+      "Created a scalable HubDB ecosystem supporting resources, events, and global market access content across nemko.com.",
     ],
-    metric: "B2B website",
-    accent: "from-violet-400/20 via-teal-400/10 to-transparent",
-    featured: true,
-    headline: "Service-led B2B site with CRM conversion flows",
-  },
-  {
-    slug: "flx-networks",
-    title: "FLX Networks",
-    category: "Professional Project",
-    period: "2024 – 2025",
-    liveUrl: "https://www.flxnetworks.com/",
-    overview:
-      "Financial-services web platform with structured content, responsive pages, and business-friendly CMS management.",
-    problem:
-      "Financial audiences need credible presentation, clear navigation, and frictionless access to key content across devices.",
-    solution:
-      "Created responsive HubSpot CMS sections and HubDB content structures for complex financial information.",
-    technologies: ["HubSpot CMS", "HubL", "HubDB", "JavaScript", "Responsive Development"],
-    keyContributions: [
-      "Developed reusable CMS modules for structured content presentation.",
-      "Improved mobile and desktop responsiveness across page sections.",
-      "Supported editable HubSpot content patterns for non-technical teams.",
-    ],
-    results: [
-      "Produced a cleaner, scalable CMS page-building experience.",
-      "Supported a professional web presence for a finance-focused audience.",
-    ],
-    metric: "Finance CMS",
-    accent: "from-lime-400/20 via-emerald-400/10 to-transparent",
-  },
-  {
-    slug: "dxd-capital",
-    title: "DXD Capital",
-    category: "Professional Project",
-    period: "2024 – 2025",
-    liveUrl: "https://dxd.capital/",
-    overview:
-      "Investment-focused website emphasizing credibility, content clarity, and polished HubSpot CMS execution.",
-    problem:
-      "Investment websites must communicate trust and detail while staying easy for teams to update as content evolves.",
-    solution:
-      "Built professional CMS pages with structured content areas, responsive UI, and reusable module patterns.",
-    technologies: ["HubSpot CMS", "HubL", "JavaScript", "CMS Modules", "Responsive UI"],
-    keyContributions: [
-      "Implemented responsive CMS page sections aligned with brand and content needs.",
-      "Created reusable module patterns for consistent updates across the site.",
-      "Refined spacing, layout, and interaction details for a premium presentation.",
-    ],
-    results: [
-      "Delivered a premium CMS-managed web experience.",
-      "Improved maintainability for future content and campaign updates.",
-    ],
-    metric: "Premium CMS",
-    accent: "from-yellow-400/20 via-cyan-400/10 to-transparent",
-  },
-  {
-    slug: "growflow",
-    title: "GrowFlow",
-    category: "Professional Project",
-    period: "2024 – 2025",
-    liveUrl: "https://www.growflow.com/growflow-blog-2025",
-    overview:
-      "Growth-focused marketing website with CMS flexibility, HubDB content, and conversion-oriented user paths.",
-    problem:
-      "Marketing teams need pages that evolve quickly without sacrificing performance, structure, or visual consistency.",
-    solution:
-      "Developed flexible CMS sections, HubDB-driven layouts, and integration-ready patterns for campaigns and blog content.",
-    technologies: ["HubSpot CMS", "HubL", "HubDB", "JavaScript", "API Integrations"],
-    keyContributions: [
-      "Built flexible page modules for marketing and product content.",
-      "Supported structured content with HubDB for dynamic page data.",
-      "Prepared integration-ready areas for forms, CRM actions, and campaign flows.",
-    ],
-    results: [
-      "Enabled faster page updates through reusable CMS components.",
-      "Strengthened the bridge between marketing pages and business workflows.",
-    ],
-    metric: "Growth website",
+    metric: "HubDB ecosystem",
     accent: "from-teal-400/24 via-blue-400/10 to-transparent",
     featured: true,
-    headline: "Marketing CMS with HubDB and campaign-ready modules",
+    headline: "HubDB Digital Experience Platform",
+  },
+  {
+    slug: "easy-travel-merchandise-automation",
+    title: "Easy Travel Merchandise Automation",
+    category: "Professional Project",
+    period: "2024 – Present",
+    liveUrl: "https://dev.hubspotexperts.com/merchandise-page",
+    overview:
+      "Built merchandise management and HubSpot CRM automation workflows connecting a HubDB product catalog to deal pipelines, line item synchronization, and customer purchase workflows.",
+    problem:
+      "Merchandise sales required a structured product catalog connected to HubSpot CRM—with deal automation and line item synchronization—to eliminate manual pipeline updates and inconsistent purchase tracking.",
+    solution:
+      "Architected HubDB product catalog management with CRM workflow integration, deal automation, line item synchronization, product sorting systems, and a dedicated merchandise pipeline structure.",
+    technologies: ["HubDB", "HubSpot CRM", "JavaScript", "HubSpot Deals"],
+    keyContributions: [
+      "Designed product catalog architecture and HubDB product management system.",
+      "Built deal automation and line item synchronization workflows.",
+      "Integrated CRM workflow automation for merchandise purchases.",
+      "Implemented product sorting systems and merchandise pipeline architecture.",
+    ],
+    results: [
+      "Automated merchandise management and customer purchase workflows across HubSpot CRM.",
+    ],
+    metric: "CRM merchandise automation",
+    accent: "from-lime-400/20 via-emerald-400/10 to-transparent",
+    headline: "Merchandise & CRM Automation",
+  },
+  {
+    slug: "telus-health-marketing-automation",
+    title: "Telus Health Marketing Automation",
+    category: "Professional Project",
+    period: "2024 – Present",
+    liveUrl: "https://www.telushealth.com",
+    overview:
+      "Worked on HubSpot CRM workflow validation, landing page migration, lead routing, and marketing automation QA for Telus Health—ensuring reliable form automation, email workflows, and MQL routing.",
+    problem:
+      "Marketing automation workflows, landing pages, and lead routing required systematic validation and migration support to ensure accurate branch logic, reliable MQL routing, and consistent form and email automation across HubSpot CRM.",
+    solution:
+      "Executed workflow testing and branch validation, performed form and email automation QA, supported landing page migration, and troubleshooted CRM workflows to stabilize marketing operations.",
+    technologies: ["HubSpot CRM", "HubSpot Workflows", "Forms", "Email Automation"],
+    keyContributions: [
+      "Conducted workflow testing and branch validation across HubSpot automation paths.",
+      "Performed form automation and email automation QA.",
+      "Supported landing page migration to HubSpot.",
+      "Troubleshot CRM workflow issues and validated MQL routing logic.",
+    ],
+    results: [
+      "Improved reliability and accuracy of marketing automation systems for Telus Health.",
+    ],
+    metric: "Marketing automation QA",
+    accent: "from-rose-400/20 via-orange-400/10 to-transparent",
+    headline: "Marketing Automation & Lead Routing",
   },
 ];
 
 export const featuredProjects = projects.filter((project) => project.featured);
+export const hubspotProjects = projects;
 export const personalProjects = projects.filter((project) => project.category === "Personal Project");
 export const professionalProjects = projects.filter((project) => project.category === "Professional Project");
 

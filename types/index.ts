@@ -1,5 +1,7 @@
 import type { LucideIcon } from "lucide-react";
 
+export type ProjectGroup = "hubspot" | "wordpress" | "nextjs" | "personal";
+
 export type Project = {
   slug: string;
   title: string;
@@ -16,6 +18,27 @@ export type Project = {
   headline?: string;
   period?: string;
   liveUrl?: string;
+  screenshot?: string;
+  projectGroup?: ProjectGroup;
+};
+
+export type WebsiteProject = {
+  slug: string;
+  title: string;
+  liveUrl?: string;
+  screenshot: string;
+  technologies: string[];
+  description: string;
+  challenge: string;
+  approach: string;
+  contributions: string[];
+  businessImpact: string[];
+  metric: string;
+  accent: string;
+  headline?: string;
+  period?: string;
+  featured?: boolean;
+  group: "wordpress" | "nextjs" | "personal";
 };
 
 export type ExperienceHighlight = {

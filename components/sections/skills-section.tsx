@@ -13,7 +13,7 @@ export function SkillsSection() {
         <SectionHeading
           eyebrow="Skills"
           title="Skills and tools"
-          description="Technologies used in client delivery and personal projects."
+          description="HubSpot CMS, HubDB, automation, front-end, and integration skills used across client delivery."
         />
 
         <StaggerContainer className="mt-14 grid gap-5 lg:mt-16 lg:grid-cols-2">

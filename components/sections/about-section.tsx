@@ -4,21 +4,6 @@ import { SectionHeading } from "@/components/shared/section-heading";
 import { Card, CardContent } from "@/components/ui/card";
 import { profile } from "@/data/profile";
 
-const focusAreas = [
-  {
-    title: "HubSpot CMS delivery",
-    detail: "Templates, modules, HubDB, and editor-ready systems for marketing teams.",
-  },
-  {
-    title: "Integrations & CRM",
-    detail: "Forms, APIs, membership flows, and workflow-connected web properties.",
-  },
-  {
-    title: "Python & applied AI",
-    detail: "Flask services, automation, and ML prototypes that extend delivery capability.",
-  },
-];
-
 export function AboutSection({ standalone = false }: { standalone?: boolean }) {
   return (
     <section
@@ -39,12 +24,10 @@ export function AboutSection({ standalone = false }: { standalone?: boolean }) {
             <Card className="overflow-hidden">
               <CardContent className="p-6 sm:p-8 lg:p-10">
                 <p className="text-base leading-8 text-muted-foreground sm:text-lg sm:leading-9">
-                  {profile.degree} from {profile.university}. I work where marketing websites meet
-                  engineering — HubSpot CMS, WordPress, HubDB, REST APIs, membership systems, and Python/AI
-                  prototypes that extend what teams can ship.
+                  {profile.aboutBody}
                 </p>
                 <div className="mt-10 grid gap-4">
-                  {focusAreas.map((item) => (
+                  {profile.focusAreas.map((item) => (
                     <div
                       key={item.title}
                       className="rounded-xl border border-border/80 bg-white/[0.02] p-5 transition-colors hover:border-primary/25"

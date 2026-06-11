@@ -7,7 +7,7 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Container } from "@/components/shared/container";
-import { getProjectBySlug, projects } from "@/data/projects";
+import { getProjectBySlug, projects } from "@/data/all-projects";
 import { siteConfig } from "@/config/site";
 
 type ProjectDetailPageProps = {

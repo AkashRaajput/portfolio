@@ -2,7 +2,7 @@ import { ImageResponse } from "next/og";
 
 import { siteConfig } from "@/config/site";
 
-export const alt = `${siteConfig.name} — ${siteConfig.role}`;
+export const alt = siteConfig.seoTitle;
 export const size = {
   width: 1200,
   height: 630,
@@ -27,7 +27,7 @@ export default function OpenGraphImage() {
         }}
       >
         <div style={{ display: "flex", fontSize: "28px", color: "#5eead4", fontWeight: 700 }}>
-          {siteConfig.role}
+          {siteConfig.title}
         </div>
 
         <div style={{ display: "flex", flexDirection: "column" }}>
@@ -44,16 +44,16 @@ export default function OpenGraphImage() {
               color: "#cbd5e1",
             }}
           >
-            {siteConfig.description}
+            {siteConfig.ogDescription}
           </div>
         </div>
 
         <div style={{ display: "flex", gap: "18px", fontSize: "28px", color: "#99f6e4" }}>
           <div style={{ display: "flex" }}>HubSpot CMS</div>
-          <div style={{ display: "flex" }}>HubL</div>
-          <div style={{ display: "flex" }}>Python</div>
-          <div style={{ display: "flex" }}>AI</div>
-          <div style={{ display: "flex" }}>CRM Integrations</div>
+          <div style={{ display: "flex" }}>HubDB</div>
+          <div style={{ display: "flex" }}>CRM Automation</div>
+          <div style={{ display: "flex" }}>Membership Portals</div>
+          <div style={{ display: "flex" }}>Next.js</div>
         </div>
       </div>
     ),

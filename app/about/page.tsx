@@ -7,7 +7,8 @@ import { siteConfig } from "@/config/site";
 
 export const metadata: Metadata = {
   title: "About",
-  description: "About Akash Kumar — HubSpot CMS Developer at Palmspire Technology.",
+  description:
+    "About Akash Kumar — HubSpot Developer and Automation Specialist at Palmspire Technology, specializing in HubDB architecture, membership platforms, and CRM integrations.",
   alternates: {
     canonical: `${siteConfig.url}/about`,
   },

@@ -19,7 +19,7 @@ export function ExperienceSection({ standalone = false }: { standalone?: boolean
         <SectionHeading
           eyebrow="Experience"
           title="Work history"
-          description="HubSpot CMS Developer at Palmspire Technology since Aug 2024. Previously AI Intern at OpenWeaver."
+          description="HubSpot Developer at Palmspire Technology since 2024, delivering CMS, HubDB, and automation solutions remotely from Noida. Previously AI Intern at OpenWeaver."
           as={standalone ? "h1" : "h2"}
         />
 

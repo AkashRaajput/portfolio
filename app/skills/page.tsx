@@ -5,7 +5,8 @@ import { siteConfig } from "@/config/site";
 
 export const metadata: Metadata = {
   title: "Skills",
-  description: "Technical skills and tools used in client and personal work.",
+  description:
+    "HubSpot CMS, HubDB, workflow automation, front-end, backend, and integration skills for Akash Kumar.",
   alternates: {
     canonical: `${siteConfig.url}/skills`,
   },

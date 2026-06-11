@@ -6,7 +6,7 @@ import { siteConfig } from "@/config/site";
 export const metadata: Metadata = {
   title: "Experience",
   description:
-    "Professional experience for Akash Kumar, including Palmspire Technology and OpenWeaver AI Internship work.",
+    "Professional experience for Akash Kumar — HubSpot Developer at Palmspire Technology building CMS, HubDB, membership, and automation solutions for North American clients.",
   alternates: {
     canonical: `${siteConfig.url}/experience`,
   },

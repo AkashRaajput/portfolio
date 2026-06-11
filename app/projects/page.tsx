@@ -1,16 +1,25 @@
 import type { Metadata } from "next";
 
+import { PlatformProjectsSection } from "@/components/sections/platform-projects-section";
 import { ProjectsSection } from "@/components/sections/projects-section";
+import { WordPressProjectsSection } from "@/components/sections/wordpress-projects-section";
 import { siteConfig } from "@/config/site";
 
 export const metadata: Metadata = {
   title: "Projects",
-  description: "Selected projects in HubSpot CMS, integrations, and Python.",
+  description:
+    "HubSpot CMS, WordPress, Next.js, and personal projects across membership portals, HubDB platforms, CRM automation, and web development.",
   alternates: {
     canonical: `${siteConfig.url}/projects`,
   },
 };
 
 export default function ProjectsPage() {
-  return <ProjectsSection standalone />;
+  return (
+    <>
+      <ProjectsSection standalone />
+      <WordPressProjectsSection />
+      <PlatformProjectsSection />
+    </>
+  );
 }

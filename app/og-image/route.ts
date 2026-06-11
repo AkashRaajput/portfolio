@@ -7,10 +7,10 @@ export function GET() {
   <circle cx="190" cy="90" r="260" fill="#2dd4bf" opacity="0.28"/>
   <circle cx="1000" cy="520" r="320" fill="#f59e0b" opacity="0.16"/>
   <rect x="72" y="72" width="1056" height="486" rx="32" fill="#111827" opacity="0.74" stroke="#2dd4bf" stroke-opacity="0.3"/>
-  <text x="112" y="142" fill="#5eead4" font-family="Arial, sans-serif" font-size="28" font-weight="700">${siteConfig.role}</text>
+  <text x="112" y="142" fill="#5eead4" font-family="Arial, sans-serif" font-size="28" font-weight="700">${siteConfig.title}</text>
   <text x="112" y="286" fill="#f8fafc" font-family="Arial, sans-serif" font-size="76" font-weight="700">${siteConfig.name}</text>
-  <text x="112" y="380" fill="#cbd5e1" font-family="Arial, sans-serif" font-size="32">${siteConfig.description}</text>
-  <text x="112" y="506" fill="#99f6e4" font-family="Arial, sans-serif" font-size="28">HubSpot CMS • HubL • Python • WordPress</text>
+  <text x="112" y="380" fill="#cbd5e1" font-family="Arial, sans-serif" font-size="32">${siteConfig.ogDescription}</text>
+  <text x="112" y="506" fill="#99f6e4" font-family="Arial, sans-serif" font-size="28">HubSpot CMS • HubDB • CRM Automation • Next.js</text>
 </svg>`;
 
   return new Response(svg, {

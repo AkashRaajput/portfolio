@@ -1,68 +1,90 @@
-import { BrainCircuit, Braces, Code2, Database, GitBranch, LayoutDashboard } from "lucide-react";
+import { Braces, Code2, Gauge, GitBranch, LayoutDashboard, Server } from "lucide-react";
 
 import type { Achievement, CoreSkill, SkillGroup } from "@/types";
 
 export const coreSkills: CoreSkill[] = [
   {
-    name: "HubSpot CMS",
+    name: "HubSpot CMS & HubDB",
     proficiency: 94,
-    detail: "HubL, modules, templates, blogs, resources, and editor-ready systems",
+    detail: "Custom modules, dynamic pages, membership functionality, resource libraries, and events platforms",
   },
   {
-    name: "HubDB & CRM",
-    proficiency: 90,
-    detail: "Dynamic listings, forms, workflows, and REST API integrations",
+    name: "Workflow Automation & CRM",
+    proficiency: 92,
+    detail: "CRM customization, lists and automation, integrations, and marketing operations workflows",
   },
   {
     name: "JavaScript / TypeScript",
-    proficiency: 86,
-    detail: "React, Next.js, responsive UI, and API-connected front ends",
+    proficiency: 88,
+    detail: "React, Next.js, Tailwind CSS, and API-connected front-end development",
   },
   {
-    name: "Python / AI",
-    proficiency: 84,
-    detail: "Flask, TensorFlow, OpenCV, Scikit-learn, and ML prototypes",
+    name: "Python & Flask",
+    proficiency: 82,
+    detail: "REST APIs, proof-of-concept applications, and backend integration logic",
   },
 ];
 
 export const skillGroups: SkillGroup[] = [
   {
-    title: "CMS & Platforms",
+    title: "HubSpot",
     icon: LayoutDashboard,
-    description: "HubSpot CMS, WordPress, and Elementor delivery for marketing teams.",
-    skills: ["HubSpot CMS", "HubL", "HubDB", "WordPress", "Elementor"],
+    description: "CMS development, HubDB architecture, and marketing automation delivery.",
+    skills: [
+      "HubSpot CMS",
+      "HubDB",
+      "HubL",
+      "Custom Modules",
+      "Dynamic Pages",
+      "Membership Functionality",
+      "Resource Libraries",
+      "Events Platforms",
+      "Blog Systems",
+      "Landing Pages",
+      "Email Templates",
+      "Workflows",
+      "CRM Customization",
+      "Lists & Automation",
+    ],
     featured: true,
   },
   {
     title: "Frontend",
     icon: Braces,
-    description: "Modern JavaScript development and responsive web experiences.",
-    skills: ["HTML5", "CSS3", "JavaScript", "TypeScript", "React", "Next.js"],
+    description: "Modern front-end development with responsive, performance-focused interfaces.",
+    skills: ["HTML5", "CSS3", "SCSS", "JavaScript", "TypeScript", "React", "Next.js", "Tailwind CSS"],
     featured: true,
   },
   {
-    title: "Backend & APIs",
+    title: "Backend",
     icon: Code2,
-    description: "Python services, REST APIs, and integration logic.",
-    skills: ["Python", "Flask", "REST APIs", "Automation", "Membership Systems"],
+    description: "Server-side logic, APIs, and integration development.",
+    skills: ["Node.js", "Python", "Flask", "REST APIs"],
   },
   {
-    title: "AI / Machine Learning",
-    icon: BrainCircuit,
-    description: "Applied ML, computer vision, and data-driven prototypes.",
-    skills: ["TensorFlow", "PyTorch", "OpenCV", "Scikit-learn", "NumPy", "Pandas"],
-  },
-  {
-    title: "Data & CRM",
-    icon: Database,
-    description: "HubDB models, CRM workflows, and structured content systems.",
-    skills: ["HubDB", "CRM Integrations", "MySQL", "SQL Server", "Workflow Automation"],
+    title: "CMS",
+    icon: Server,
+    description: "Content management platforms for marketing and business teams.",
+    skills: ["HubSpot", "WordPress"],
   },
   {
     title: "Tools",
     icon: GitBranch,
-    description: "Development, deployment, and collaboration tooling.",
-    skills: ["Git", "GitHub", "VS Code", "Postman", "Jupyter", "Vercel", "Render"],
+    description: "Development, testing, deployment, and collaboration tooling.",
+    skills: ["Git", "GitHub", "Vercel", "BrowserStack", "Postman"],
+  },
+  {
+    title: "Other",
+    icon: Gauge,
+    description: "Delivery practices focused on quality, performance, and maintainability.",
+    skills: [
+      "SEO Optimization",
+      "Accessibility",
+      "Performance Optimization",
+      "Core Web Vitals",
+      "Technical Documentation",
+      "Solution Architecture",
+    ],
   },
 ];
 
