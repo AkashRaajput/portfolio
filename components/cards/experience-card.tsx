@@ -184,7 +184,8 @@ export function ExperienceCard({
             viewport={{ once: true }}
             transition={{ type: "spring", stiffness: 320, damping: 22, delay: index * 0.1 }}
             className={cn(
-              "absolute left-1/2 top-10 z-10 flex size-11 -translate-x-1/2 items-center justify-center rounded-full border-2 bg-background shadow-lg",
+              "absolute top-14 z-10 flex size-11 items-center justify-center rounded-full border-2 bg-background shadow-lg",
+              alignRight ? "right-0 translate-x-1/2" : "left-0 -translate-x-1/2",
               experience.isCurrent
                 ? "border-primary text-primary shadow-primary/25"
                 : "border-border text-muted-foreground",
@@ -194,9 +195,7 @@ export function ExperienceCard({
             <Icon className="size-4" />
           </motion.span>
 
-          <div className="relative">
-            <ExperienceCardBody experience={experience} />
-          </div>
+          <ExperienceCardBody experience={experience} />
         </div>
       </div>
     </motion.article>
