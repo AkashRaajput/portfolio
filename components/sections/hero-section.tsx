@@ -4,6 +4,7 @@ import Link from "next/link";
 import { ArrowRight, ArrowUpRight, Download } from "lucide-react";
 import { motion } from "framer-motion";
 
+import { siteConfig } from "@/config/site";
 import { profile } from "@/data/profile";
 import { featuredProjects } from "@/data/projects";
 import { Button } from "@/components/ui/button";
@@ -68,7 +69,7 @@ export function HeroSection() {
                 </Link>
               </Button>
               <Button asChild variant="outline" size="lg" className="h-12 px-6">
-                <Link href="/resume" download>
+                <Link href={siteConfig.resume.href} download={siteConfig.resume.filename}>
                   <Download />
                   Download resume
                 </Link>

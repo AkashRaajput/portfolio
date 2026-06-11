@@ -1,53 +1,24 @@
+import { readFile } from "fs/promises";
+import path from "path";
+
 import { NextResponse } from "next/server";
 
-import { education } from "@/data/education";
-import { achievements } from "@/data/skills";
-import { experiences } from "@/data/experience";
-import { profile } from "@/data/profile";
-import { projects } from "@/data/projects";
 import { siteConfig } from "@/config/site";
 
-export function GET() {
-  const resume = [
-    siteConfig.name,
-    siteConfig.role,
-    siteConfig.email,
-    siteConfig.phone,
-    siteConfig.socials.github,
-    siteConfig.socials.linkedin,
-    "",
-    "SUMMARY",
-    profile.bio,
-    "",
-    "EDUCATION",
-    ...education.map((item) => `- ${item.degree}, ${item.institution} (${item.period}) — ${item.score}`),
-    "",
-    "EXPERIENCE",
-    ...experiences.flatMap((experience) => [
-      `${experience.role} — ${experience.company}`,
-      `${experience.period} · ${experience.location}`,
-      experience.summary,
-      ...experience.impact.map((item) => `- ${item}`),
-      "",
-    ]),
-    "PROJECTS",
-    ...projects.map((project) => {
-      const link = project.liveUrl ? ` (${project.liveUrl})` : "";
-      return `- ${project.title}${project.period ? ` [${project.period}]` : ""}: ${project.overview}${link}`;
-    }),
-    "",
-    "ACHIEVEMENTS",
-    ...achievements.map(
-      (achievement) =>
-        `- ${achievement.label}: ${achievement.value}${achievement.year ? ` (${achievement.year})` : ""} — ${achievement.detail}`,
-    ),
-  ].join("\n");
+export async function GET() {
+  const filePath = path.join(process.cwd(), "app", "resume", siteConfig.resume.filename);
 
-  return new NextResponse(resume, {
-    headers: {
-      "Content-Type": "text/markdown; charset=utf-8",
-      "Content-Disposition": 'attachment; filename="Akash-Kumar-Resume.md"',
-      "Cache-Control": "public, max-age=3600",
-    },
-  });
+  try {
+    const pdf = await readFile(filePath);
+
+    return new NextResponse(pdf, {
+      headers: {
+        "Content-Type": "application/pdf",
+        "Content-Disposition": `attachment; filename="${siteConfig.resume.filename}"`,
+        "Cache-Control": "public, max-age=31536000, immutable",
+      },
+    });
+  } catch {
+    return NextResponse.json({ error: "Resume file not found." }, { status: 404 });
+  }
 }

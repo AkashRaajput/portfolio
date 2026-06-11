@@ -6,7 +6,7 @@ import { motion } from "framer-motion";
 
 export function ExperienceHighlights({ items }: { items: ExperienceHighlight[] }) {
   return (
-    <StaggerContainer className="mt-12 grid gap-3 sm:grid-cols-2 lg:mt-14 lg:grid-cols-5 lg:gap-4">
+    <StaggerContainer className="mt-12 grid grid-cols-2 gap-3 md:grid-cols-3 lg:mt-14 lg:grid-cols-5 lg:gap-4">
       {items.map((item) => (
         <motion.div
           key={item.label}

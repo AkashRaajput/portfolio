@@ -42,7 +42,7 @@ export function SiteHeader() {
 
         <div className="hidden items-center gap-3 lg:flex">
           <Button asChild variant="outline" size="sm">
-            <Link href="/resume" download>
+            <Link href={siteConfig.resume.href} download={siteConfig.resume.filename}>
               <Download />
               Resume
             </Link>
@@ -83,8 +83,8 @@ export function SiteHeader() {
               </Link>
             ))}
             <Link
-              href="/resume"
-              download
+              href={siteConfig.resume.href}
+              download={siteConfig.resume.filename}
               onClick={() => setOpen(false)}
               className="flex items-center gap-2 rounded-md px-3 py-3 text-sm text-muted-foreground transition-colors hover:bg-secondary hover:text-foreground"
             >

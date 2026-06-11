@@ -25,10 +25,10 @@ export function ExperienceSection({ standalone = false }: { standalone?: boolean
 
         <ExperienceHighlights items={palmspireHighlights} />
 
-        <div className="relative mt-16 lg:mt-20">
-          {/* Animated timeline spine */}
+        <div className="relative mt-12 sm:mt-16 lg:mt-20">
+          {/* Animated timeline spine — desktop only */}
           <div
-            className="pointer-events-none absolute bottom-0 left-4 top-0 w-px bg-border lg:left-1/2 lg:-translate-x-px"
+            className="pointer-events-none absolute bottom-0 left-1/2 top-0 hidden w-px -translate-x-px bg-border lg:block"
             aria-hidden="true"
           >
             <motion.div
@@ -40,7 +40,7 @@ export function ExperienceSection({ standalone = false }: { standalone?: boolean
             />
           </div>
 
-          <StaggerContainer className="relative space-y-12 lg:space-y-0">
+          <StaggerContainer className="relative space-y-0">
             {experiences.map((experience, index) => (
               <ExperienceCard
                 key={`${experience.company}-${experience.role}`}
