@@ -6,7 +6,7 @@ export const projects: Project[] = [
     title: "Valiantys Ticketing Portal",
     category: "Professional Project",
     period: "2024 – Present",
-    liveUrl: "https://www.valiantys.com",
+    liveUrl: "http://valiantys-support.atlassian.net/",
     overview:
       "Built an enterprise ticketing portal on HubSpot CMS enabling customers to authenticate via Atlassian OAuth, view organization tickets, create tickets, comment on tickets, and access multiple Jira Service Management regions through a single unified portal.",
     problem:
@@ -74,7 +74,7 @@ export const projects: Project[] = [
     title: "GTIA Resource Library",
     category: "Professional Project",
     period: "2024 – Present",
-    liveUrl: "https://gtia.org/resource-library",
+    liveUrl: "https://gtia-org.sandbox.hs-sites.com/resource-library",
     overview:
       "Developed a HubDB-powered resource library with membership-based content access, gated listing and detail pages, reporting capabilities, and personalized content delivery for GTIA members.",
     problem:
